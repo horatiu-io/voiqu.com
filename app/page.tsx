@@ -68,16 +68,10 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link href="#contact-form-section" scroll={true}>
                 <Button className="bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-8 py-4 text-lg h-auto rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
-                  Get Free Proposal
+                  Get Proposal
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                className="border-2 border-gray-600 text-white hover:bg-gray-800 px-8 py-4 text-lg h-auto rounded-xl bg-transparent"
-              >
-                See My Work
-              </Button>
             </div>
 
             {/* Benefits List */}
