@@ -18,15 +18,15 @@ export default function Contact() {
 
               <div className="space-y-4">
                 <Link
-                  href="mailto:hello@growthhacker.com"
+                  href="mailto:h@voiqu.com"
                   className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Mail className="mr-3 w-5 h-5" />
-                  hello@growthhacker.com
+                  h@voiqu.com
                 </Link>
 
                 <Link
-                  href="https://linkedin.com/in/growthhacker"
+                  href="https://linkedin.com/in/voiqu"
                   className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
                 >
                   <Linkedin className="mr-3 w-5 h-5" />
