@@ -144,21 +144,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
+                13
+              </div>
+              <div className="text-gray-300">Years of experience</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
                 10
               </div>
               <div className="text-gray-300">Years in the Google Partners program</div>
             </div>
             <div>
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
-                +1M
+                +1M €
               </div>
               <div className="text-gray-300">Google Ads Spent</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
-                10+
-              </div>
-              <div className="text-gray-300">Years Experience</div>
             </div>
           </div>
         </div>
