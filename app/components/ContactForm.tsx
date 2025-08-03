@@ -1,7 +1,6 @@
 "use client"
 
-import type React from "react"
-import { useState } from "react"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -75,7 +74,7 @@ export default function ContactForm() {
         interestedServices: [],
         budgetRange: "",
       })
-    } catch (err) {
+    } catch {
       setError("Sorry, something went wrong. Try again later.")
     }
   }
