@@ -45,8 +45,9 @@ export default function RootLayout({
         {/* Hidden form for Netlify bot detection */}
         <form 
           name="contact" 
-          data-netlify="true" 
-          data-netlify-honeypot="bot-field" 
+          method="POST"
+          {...{ "data-netlify": "true" }}
+          {...{ "data-netlify-honeypot": "bot-field" }}
           style={{ display: "none" }}
         >
           <input type="text" name="fullName" />
