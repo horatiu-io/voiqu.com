@@ -7,7 +7,7 @@ import Footer from "./components/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const meta Metadata = {
+export const metadata: Metadata = {
   title: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
   description:
     "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
@@ -41,24 +41,6 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-
-        {/* Hidden form for Netlify bot detection */}
-        <form 
-          name="contact" 
-          method="POST"
-          {...{ "data-netlify": "true" }}
-          {...{ "data-netlify-honeypot": "bot-field" }}
-          style={{ display: "none" }}
-        >
-          <input type="text" name="fullName" />
-          <input type="text" name="companyName" />
-          <input type="email" name="workEmail" />
-          <input type="tel" name="phoneNumber" />
-          <textarea name="projectDescription"></textarea>
-          <input type="text" name="interestedServices" />
-          <input type="text" name="budgetRange" />
-        </form>
-
         <Navigation />
         <main>{children}</main>
         <Footer />
