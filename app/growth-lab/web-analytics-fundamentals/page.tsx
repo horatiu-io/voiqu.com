@@ -56,7 +56,7 @@ export default function WebAnalyticsFundamentalsPage() {
         {/* Author Section */}
         <div className="flex items-center gap-4 mb-12 text-gray-400">
           <Image
-            src="/placeholder-user.jpg" // Placeholder for author image
+            src="/h-voiqu.webp" // Placeholder for author image
             alt={author.name}
             width={48}
             height={48}
