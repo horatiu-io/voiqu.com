@@ -8,8 +8,8 @@ export default function Footer() {
     { href: "https://open.spotify.com/user/voiqu-h?si=G0qIL1cnTzOik_GFaFq1XQ", icon: Music, label: "Spotify" },
     { href: "https://x.com/voiqu", icon: Twitter, label: "Twitter" },
     { href: "https://www.linkedin.com/in/voiqu/", icon: Linkedin, label: "LinkedIn" },
-    { href: "https://www.reddit.com/user/voiquh", icon: "/public/reddit-icon.svg", label: "Reddit" },
-    { href: "https://www.facebook.com/voiquh", icon: "/public/facebook-icon.svg", label: "Facebook" },
+    { href: "https://www.reddit.com/user/voiquh", icon: "/reddit-icon.svg", label: "Reddit" },
+    { href: "https://www.facebook.com/voiquh", icon: "/facebook-icon.svg", label: "Facebook" },
     { href: "https://wa.me/40740244298", icon: Phone, label: "WhatsApp" },
   ]
 
