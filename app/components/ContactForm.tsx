@@ -1,26 +1,14 @@
 "use client"
 
-import React, { useState } from "react"
+import type React from "react"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-
-// THIS is the correct encode function signature!
-function encode( { [key: string]: any }) {
-  return Object.keys(data)
-    .map(
-      (key) =>
-        encodeURIComponent(key) +
-        "=" +
-        encodeURIComponent(
-          Array.isArray(data[key]) ? data[key].join(", ") : data[key] ?? ""
-        )
-    )
-    .join("&")
-}
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -33,74 +21,32 @@ export default function ContactForm() {
     budgetRange: "",
   })
 
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-
   const services = ["Backlinks", "Tracking", "PPC Campaigns", "SEO Strategy"]
-  const budgetRanges = [
-    "< $5,000",
-    "$5,000 - $15,000",
-    "$15,000 - $100,000",
-    "+$100,000",
-  ]
+
+  const budgetRanges = ["< $5,000", "$5,000 - $15,000", "$15,000 - $100,000", "+$100,000"]
 
   const handleServiceChange = (service: string, checked: boolean) => {
-    setFormData((prev) => ({
-      ...prev,
-      interestedServices: checked
-        ? [...prev.interestedServices, service]
-        : prev.interestedServices.filter((s) => s !== service),
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError(null)
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          ...formData,
-        }),
-      })
-      setSubmitted(true)
-      setFormData({
-        fullName: "",
-        companyName: "",
-        workEmail: "",
-        phoneNumber: "",
-        projectDescription: "",
-        interestedServices: [],
-        budgetRange: "",
-      })
-    } catch {
-      setError("Sorry, something went wrong. Try again later.")
+    if (checked) {
+      setFormData((prev) => ({
+        ...prev,
+        interestedServices: [...prev.interestedServices, service],
+      }))
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        interestedServices: prev.interestedServices.filter((s) => s !== service),
+      }))
     }
   }
 
-  if (submitted) {
-    return (
-      <div className="p-6 text-center text-green-400">
-        <p>Thank you for your message! We’ll be in touch soon.</p>
-      </div>
-    )
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+    // Handle form submission here
   }
 
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      onSubmit={handleSubmit}
-      className="space-y-6"
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      {error ? (
-        <div className="text-red-400 text-center mb-4">{error}</div>
-      ) : null}
-
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="fullName" className="text-white">
@@ -108,12 +54,9 @@ export default function ContactForm() {
           </Label>
           <Input
             id="fullName"
-            name="fullName"
             required
             value={formData.fullName}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, fullName: e.target.value }))
-            }
+            onChange={(e) => setFormData((prev) => ({ ...prev, fullName: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -123,11 +66,8 @@ export default function ContactForm() {
           </Label>
           <Input
             id="companyName"
-            name="companyName"
             value={formData.companyName}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, companyName: e.target.value }))
-            }
+            onChange={(e) => setFormData((prev) => ({ ...prev, companyName: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -140,13 +80,10 @@ export default function ContactForm() {
           </Label>
           <Input
             id="workEmail"
-            name="workEmail"
             type="email"
             required
             value={formData.workEmail}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, workEmail: e.target.value }))
-            }
+            onChange={(e) => setFormData((prev) => ({ ...prev, workEmail: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -156,15 +93,9 @@ export default function ContactForm() {
           </Label>
           <Input
             id="phoneNumber"
-            name="phoneNumber"
             type="tel"
             value={formData.phoneNumber}
-            onChange={(e) =>
-              setFormData((prev) => ({
-                ...prev,
-                phoneNumber: e.target.value,
-              }))
-            }
+            onChange={(e) => setFormData((prev) => ({ ...prev, phoneNumber: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -176,15 +107,9 @@ export default function ContactForm() {
         </Label>
         <Textarea
           id="projectDescription"
-          name="projectDescription"
           rows={4}
           value={formData.projectDescription}
-          onChange={(e) =>
-            setFormData((prev) => ({
-              ...prev,
-              projectDescription: e.target.value,
-            }))
-          }
+          onChange={(e) => setFormData((prev) => ({ ...prev, projectDescription: e.target.value }))}
           className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
         />
       </div>
@@ -194,14 +119,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-2 gap-3">
           {services.map((service) => (
             <div key={service} className="flex items-center space-x-2">
-              <Checkbox
-                id={service}
-                name="interestedServices"
-                checked={formData.interestedServices.includes(service)}
-                onCheckedChange={(checked) =>
-                  handleServiceChange(service, !!checked)
-                }
-              />
+              <Checkbox id={service} onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)} />
               <Label htmlFor={service} className="text-gray-300">
                 {service}
               </Label>
@@ -214,21 +132,11 @@ export default function ContactForm() {
         <Label className="text-white mb-3 block">Budget Range</Label>
         <RadioGroup
           value={formData.budgetRange}
-          onValueChange={(value) =>
-            setFormData((prev) => ({ ...prev, budgetRange: value }))
-          }
+          onValueChange={(value) => setFormData((prev) => ({ ...prev, budgetRange: value }))}
         >
           {budgetRanges.map((range) => (
             <div key={range} className="flex items-center space-x-2">
-              <RadioGroupItem
-                value={range}
-                id={range}
-                name="budgetRange"
-                checked={formData.budgetRange === range}
-                onChange={() =>
-                  setFormData((prev) => ({ ...prev, budgetRange: range }))
-                }
-              />
+              <RadioGroupItem value={range} id={range} />
               <Label htmlFor={range} className="text-gray-300">
                 {range}
               </Label>
