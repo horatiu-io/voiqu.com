@@ -1,6 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
-import { Linkedin, Mail, Instagram, Music, Twitter, Phone } from "lucide-react"
+import { Linkedin, Mail, Instagram, Music, Twitter, Phone, Facebook, RssIcon as Reddit } from "lucide-react" // Added Facebook and Reddit
 
 export default function Footer() {
   const socialLinks = [
@@ -8,8 +7,8 @@ export default function Footer() {
     { href: "https://open.spotify.com/user/voiqu-h?si=G0qIL1cnTzOik_GFaFq1XQ", icon: Music, label: "Spotify" },
     { href: "https://x.com/voiqu", icon: Twitter, label: "Twitter" },
     { href: "https://www.linkedin.com/in/voiqu/", icon: Linkedin, label: "LinkedIn" },
-    { href: "https://www.reddit.com/user/voiquh", icon: "/reddit-icon.svg", label: "Reddit" },
-    { href: "https://www.facebook.com/voiquh", icon: "/facebook-icon.svg", label: "Facebook" },
+    { href: "https://www.reddit.com/user/voiquh", icon: Reddit, label: "Reddit" }, // Changed to Lucide Reddit
+    { href: "https://www.facebook.com/voiquh", icon: Facebook, label: "Facebook" }, // Changed to Lucide Facebook
     { href: "https://wa.me/40740244298", icon: Phone, label: "WhatsApp" },
   ]
 
@@ -37,20 +36,11 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors" // Apply color classes here
+                  className="text-[#99A1AE] hover:text-white transition-colors" // Apply specified color here
                   aria-label={social.label}
                 >
-                  {typeof social.icon === "string" ? (
-                    <Image
-                      src={social.icon || "/placeholder.svg"}
-                      alt={social.label}
-                      width={18}
-                      height={18}
-                      // No invert class needed, color controlled by text-gray-400
-                    />
-                  ) : (
-                    <social.icon size={18} />
-                  )}
+                  {/* Now all icons are components, no need for conditional rendering */}
+                  <social.icon size={18} />
                 </Link>
               ))}
             </div>

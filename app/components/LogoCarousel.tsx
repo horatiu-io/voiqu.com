@@ -8,11 +8,11 @@ export default function LogoCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const companies = [
-    { name: "World Class", logo: "/logos/world-class.svg", invert: false, width: 80, height: 32 },
-    { name: "WWF", logo: "/logos/wwf.svg", invert: false, width: 120, height: 48 },
-    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 80, height: 32 },
-    { name: "Answear", logo: "/logos/answear.svg", invert: false, width: 80, height: 32 },
-    { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: false, width: 80, height: 32 },
+    { name: "World Class", logo: "/logos/world-class.svg", invert: false, width: 60, height: 24 },
+    { name: "WWF", logo: "/logos/wwf.svg", invert: true, width: 90, height: 36 },
+    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 60, height: 24 },
+    { name: "Answear", logo: "/logos/answear.svg", invert: false, width: 60, height: 24 },
+    { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: false, width: 60, height: 24 },
   ]
 
   // Auto-slide every 5 seconds
