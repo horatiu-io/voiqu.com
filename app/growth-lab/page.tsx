@@ -18,7 +18,7 @@ export default function GrowthLab() {
         "We live in a world where documenting that something happened often matters more than how it actually occurred in reality. A doctor’s medical chart carries more weight than the actual treatment provided, because the next doctor will base their actions on that documented diagnosis and patient status. The same applies to police officers, lawyers, and accountants—their reports and documentation often matter more than the actual events.",
       category: "Analytics",
       date: "August 3, 2025",
-      image: "/placeholder.svg?height=200&width=400&text=Web+Analytics",
+      image: "https://images.unsplash.com/photo-1581273080622-6c93566657b0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?height=200&width=400&text=Web+Analytics",
       slug: "web-analytics-fundamentals",
     },
     {
