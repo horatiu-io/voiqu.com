@@ -208,10 +208,10 @@ export default function About() {
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
-              Read My Story (English)
+              Read My Story
             </a>
             <a
-              href="#"
+              href="https://blog.super-blog.eu/podcast/horatiu-voicu-despre-digital-marketing-si-business-prin-dezvoltare-personala/"
               className="inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
