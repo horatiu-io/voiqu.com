@@ -43,7 +43,12 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
 
         {/* Hidden form for Netlify bot detection */}
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <form 
+          name="contact" 
+          data-netlify="true" 
+          data-netlify-honeypot="bot-field" 
+          style={{ display: "none" }}
+        >
           <input type="text" name="fullName" />
           <input type="text" name="companyName" />
           <input type="email" name="workEmail" />
