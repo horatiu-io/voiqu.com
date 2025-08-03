@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button"
 import { Search, Rocket, TrendingUp, ArrowRight, CheckCircle } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link" // Import Link for scrolling
 import ContactForm from "./components/ContactForm"
 import LogoCarousel from "./components/LogoCarousel"
 
 export default function Home() {
   const companies = [
-    { name: "World Class", logo: "/logos/world-class.svg", invert: false, width: 80, height: 32 },
-    { name: "WWF", logo: "/logos/wwf.svg", invert: false, width: 120, height: 48 }, // WWF original colors, slightly larger
-    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 80, height: 32 },
-    { name: "Answear", logo: "/logos/answear.svg", invert: false, width: 80, height: 32 },
-    { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: false, width: 80, height: 32 },
+    { name: "World Class", logo: "/logos/world-class.svg", invert: true, width: 60, height: 24 },
+    { name: "WWF", logo: "/logos/wwf.svg", invert: true, width: 90, height: 36 },
+    { name: "Genezio", logo: "/logos/genezio.svg", invert: true, width: 60, height: 24 },
+    { name: "Answear", logo: "/logos/answear.svg", invert: true, width: 60, height: 24 },
+    { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: true, width: 60, height: 24 },
   ]
 
   const steps = [
@@ -65,10 +66,12 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button className="bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-8 py-4 text-lg h-auto rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
-                Get Free Proposal
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Link href="#contact-form-section" scroll={true}>
+                <Button className="bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-8 py-4 text-lg h-auto rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
+                  Get Free Proposal
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
               <Button
                 variant="outline"
                 className="border-2 border-gray-600 text-white hover:bg-gray-800 px-8 py-4 text-lg h-auto rounded-xl bg-transparent"
@@ -168,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="contact-form-section" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Grow Your Business?</h2>
