@@ -10,7 +10,7 @@ export default function LogoCarousel() {
   const companies = [
     { name: "World Class", logo: "/logos/world-class.svg", invert: true, width: 60, height: 24 },
     { name: "WWF", logo: "/logos/wwf.svg", invert: false, width: 90, height: 36 },
-    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 60, height: 24 }, // 
+    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 300, height: 60 }, // 
     { name: "Answear", logo: "/logos/answear.svg", invert: false, width: 60, height: 24 },
     { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: false, width: 60, height: 24 },
   ]
@@ -73,7 +73,7 @@ export default function LogoCarousel() {
                   height={company.height}
                   className={`opacity-80 hover:opacity-100 transition-opacity duration-300 ${
                     company.invert ? "invert" : ""
-                  } max-h-16 w-auto object-contain`}
+                  } max-h-16 w-300 object-contain`}
                   priority={index === 0}
                 />
               </div>
