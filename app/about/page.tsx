@@ -69,7 +69,7 @@ export default function About() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-2xl opacity-20"></div>
               <Image
-                src="/placeholder.svg?height=600&width=500&text=Professional+Photo"
+                src="/h-voiqu.webp"
                 alt="Professional photo"
                 width={500}
                 height={600}

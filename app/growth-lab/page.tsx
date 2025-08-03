@@ -8,18 +8,18 @@ import { Button } from "@/components/ui/button"
 export default function GrowthLab() {
   const [activeFilter, setActiveFilter] = useState("All Posts")
 
-  const categories = ["All Posts", "CRO", "Analytics", "Strategy", "PPC", "SEO"]
+  const categories = ["All Posts", "Analytics", "Strategy", "PPC", "SEO"]
 
   const articles = [
     {
       id: 1,
-      title: "The Complete Guide to Conversion Rate Optimization",
+      title: "Web Analytics Fundamentals: A Complete Guide to Implementation and Optimization",
       excerpt:
-        "Learn the fundamentals of CRO and how to implement a systematic approach to improving your conversion rates.",
-      category: "CRO",
+        "We live in a world where documenting that something happened often matters more than how it actually occurred in reality. A doctor’s medical chart carries more weight than the actual treatment provided, because the next doctor will base their actions on that documented diagnosis and patient status. The same applies to police officers, lawyers, and accountants—their reports and documentation often matter more than the actual events.",
+      category: "Analytics",
       date: "August 3, 2025",
-      image: "/placeholder.svg?height=200&width=400&text=CRO+Guide",
-      slug: "complete-guide-conversion-rate-optimization",
+      image: "/placeholder.svg?height=200&width=400&text=Web+Analytics",
+      slug: "web-analytics-fundamentals",
     },
     {
       id: 2,
