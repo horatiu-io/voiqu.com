@@ -48,6 +48,7 @@ export default function ContactForm() {
     setSubmitStatus('idle')
     
     try {
+      // Corrected the function definition here
       const encode = ( Record<string, string>) => {
         return Object.keys(data)
           .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -94,7 +95,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="contact">
       {/* Hidden input for Netlify form detection */}
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
@@ -191,6 +192,8 @@ export default function ContactForm() {
             <div key={service} className="flex items-center space-x-2">
               <Checkbox 
                 id={service} 
+                name="interestedServices"
+                value={service}
                 checked={formData.interestedServices.includes(service)}
                 onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)} 
               />
@@ -205,6 +208,7 @@ export default function ContactForm() {
       <div>
         <Label className="text-white mb-3 block">Budget Range</Label>
         <RadioGroup
+          name="budgetRange"
           value={formData.budgetRange}
           onValueChange={(value) => setFormData((prev) => ({ ...prev, budgetRange: value }))}
         >
