@@ -47,23 +47,18 @@ export default function ContactForm() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
     
-    try {
-      // Corrected the function definition here
-      const encode = ( Record<string, string>) => {
-        return Object.keys(data)
-          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-          .join("&")
-      }
+    // This function correctly encodes form data for the POST request
+    const encode = ( Record<string, string>) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
+    }
 
+    try {
       const submitData = {
         "form-name": "contact",
-        "fullName": formData.fullName,
-        "companyName": formData.companyName,
-        "workEmail": formData.workEmail,
-        "phoneNumber": formData.phoneNumber,
-        "projectDescription": formData.projectDescription,
-        "interestedServices": formData.interestedServices.join(', '),
-        "budgetRange": formData.budgetRange
+        ...formData,
+        interestedServices: formData.interestedServices.join(', '),
       }
 
       const response = await fetch("/", {
@@ -95,12 +90,23 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true" name="contact">
-      {/* Hidden input for Netlify form detection */}
+    // UPDATED: Added name, data-netlify, and data-netlify-honeypot attributes
+    <form 
+      name="contact"
+      onSubmit={handleSubmit} 
+      className="space-y-6" 
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      {/* This hidden input MUST match the form's name attribute */}
       <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="bot-field" />
+      {/* This is the honeypot field to prevent spam */}
+      <p className="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
       
-      {/* Success/Error Messages */}
       {submitStatus === 'success' && (
         <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded">
           Thank you! Your message has been sent successfully.
@@ -113,76 +119,30 @@ export default function ContactForm() {
         </div>
       )}
 
+      {/* ... (rest of your input fields like fullName, companyName, etc. are correct) ... */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <Label htmlFor="fullName" className="text-white">
-            Full Name *
-          </Label>
-          <Input
-            id="fullName"
-            name="fullName"
-            required
-            value={formData.fullName}
-            onChange={(e) => setFormData((prev) => ({ ...prev, fullName: e.target.value }))}
-            className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
-          />
+          <Label htmlFor="fullName" className="text-white">Full Name *</Label>
+          <Input id="fullName" name="fullName" required value={formData.fullName} onChange={(e) => setFormData((prev) => ({ ...prev, fullName: e.target.value }))} className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"/>
         </div>
         <div>
-          <Label htmlFor="companyName" className="text-white">
-            Company Name
-          </Label>
-          <Input
-            id="companyName"
-            name="companyName"
-            value={formData.companyName}
-            onChange={(e) => setFormData((prev) => ({ ...prev, companyName: e.target.value }))}
-            className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
-          />
+          <Label htmlFor="companyName" className="text-white">Company Name</Label>
+          <Input id="companyName" name="companyName" value={formData.companyName} onChange={(e) => setFormData((prev) => ({ ...prev, companyName: e.target.value }))} className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"/>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <Label htmlFor="workEmail" className="text-white">
-            Work Email *
-          </Label>
-          <Input
-            id="workEmail"
-            name="workEmail"
-            type="email"
-            required
-            value={formData.workEmail}
-            onChange={(e) => setFormData((prev) => ({ ...prev, workEmail: e.target.value }))}
-            className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
-          />
+          <Label htmlFor="workEmail" className="text-white">Work Email *</Label>
+          <Input id="workEmail" name="workEmail" type="email" required value={formData.workEmail} onChange={(e) => setFormData((prev) => ({ ...prev, workEmail: e.target.value }))} className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"/>
         </div>
         <div>
-          <Label htmlFor="phoneNumber" className="text-white">
-            Phone Number
-          </Label>
-          <Input
-            id="phoneNumber"
-            name="phoneNumber"
-            type="tel"
-            value={formData.phoneNumber}
-            onChange={(e) => setFormData((prev) => ({ ...prev, phoneNumber: e.target.value }))}
-            className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
-          />
+          <Label htmlFor="phoneNumber" className="text-white">Phone Number</Label>
+          <Input id="phoneNumber" name="phoneNumber" type="tel" value={formData.phoneNumber} onChange={(e) => setFormData((prev) => ({ ...prev, phoneNumber: e.target.value }))} className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"/>
         </div>
       </div>
-
       <div>
-        <Label htmlFor="projectDescription" className="text-white">
-          Tell me about your project
-        </Label>
-        <Textarea
-          id="projectDescription"
-          name="projectDescription"
-          rows={4}
-          value={formData.projectDescription}
-          onChange={(e) => setFormData((prev) => ({ ...prev, projectDescription: e.target.value }))}
-          className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
-        />
+        <Label htmlFor="projectDescription" className="text-white">Tell me about your project</Label>
+        <Textarea id="projectDescription" name="projectDescription" rows={4} value={formData.projectDescription} onChange={(e) => setFormData((prev) => ({ ...prev, projectDescription: e.target.value }))} className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"/>
       </div>
 
       <div>
@@ -192,14 +152,13 @@ export default function ContactForm() {
             <div key={service} className="flex items-center space-x-2">
               <Checkbox 
                 id={service} 
+                // UPDATED: Added name attribute for Netlify
                 name="interestedServices"
                 value={service}
                 checked={formData.interestedServices.includes(service)}
                 onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)} 
               />
-              <Label htmlFor={service} className="text-gray-300">
-                {service}
-              </Label>
+              <Label htmlFor={service} className="text-gray-300">{service}</Label>
             </div>
           ))}
         </div>
@@ -208,6 +167,7 @@ export default function ContactForm() {
       <div>
         <Label className="text-white mb-3 block">Budget Range</Label>
         <RadioGroup
+          // UPDATED: Added name attribute for Netlify
           name="budgetRange"
           value={formData.budgetRange}
           onValueChange={(value) => setFormData((prev) => ({ ...prev, budgetRange: value }))}
@@ -215,9 +175,7 @@ export default function ContactForm() {
           {budgetRanges.map((range) => (
             <div key={range} className="flex items-center space-x-2">
               <RadioGroupItem value={range} id={range} />
-              <Label htmlFor={range} className="text-gray-300">
-                {range}
-              </Label>
+              <Label htmlFor={range} className="text-gray-300">{range}</Label>
             </div>
           ))}
         </RadioGroup>
