@@ -48,26 +48,31 @@ export default function ContactForm() {
     setSubmitStatus('idle')
     
     try {
-      const formDataToSubmit = new FormData()
-      formDataToSubmit.append('form-name', 'contact')
-      formDataToSubmit.append('fullName', formData.fullName)
-      formDataToSubmit.append('companyName', formData.companyName)
-      formDataToSubmit.append('workEmail', formData.workEmail)
-      formDataToSubmit.append('phoneNumber', formData.phoneNumber)
-      formDataToSubmit.append('projectDescription', formData.projectDescription)
-      formDataToSubmit.append('interestedServices', formData.interestedServices.join(', '))
-      formDataToSubmit.append('budgetRange', formData.budgetRange)
+      const encode = ( Record<string, string>) => {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&")
+      }
 
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formDataToSubmit as any).toString()
+      const submitData = {
+        "form-name": "contact",
+        "fullName": formData.fullName,
+        "companyName": formData.companyName,
+        "workEmail": formData.workEmail,
+        "phoneNumber": formData.phoneNumber,
+        "projectDescription": formData.projectDescription,
+        "interestedServices": formData.interestedServices.join(', '),
+        "budgetRange": formData.budgetRange
+      }
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(submitData)
       })
 
       if (response.ok) {
-        console.log('Form submitted successfully!')
         setSubmitStatus('success')
-        // Reset form
         setFormData({
           fullName: "",
           companyName: "",
@@ -78,11 +83,10 @@ export default function ContactForm() {
           budgetRange: "",
         })
       } else {
-        console.error('Form submission failed')
         setSubmitStatus('error')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      console.error('Error:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -93,6 +97,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Hidden input for Netlify form detection */}
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
       
       {/* Success/Error Messages */}
       {submitStatus === 'success' && (
