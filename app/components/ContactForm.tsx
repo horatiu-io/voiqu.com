@@ -65,7 +65,7 @@ export default function ContactForm() {
         budgetRange: formData.budgetRange,
       }
 
-      const response = await fetch("/", {
+      const response = await fetch("/__index.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode(formDataToSubmit),
