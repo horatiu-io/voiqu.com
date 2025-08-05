@@ -40,8 +40,9 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // THIS IS THE FINAL, CORRECTED SYNTAX
-    const encode = ( Record<string, any>) => {
+    // This function takes an object and URL-encodes it for the form submission.
+    // The syntax is now corrected to include the 'data' parameter name.
+    const encode = (data: Record<string, any>) => {
       return Object.keys(data)
         .map(
           (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
@@ -90,6 +91,7 @@ export default function ContactForm() {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
+      {/* Hidden input for Netlify to identify the form */}
       <input type="hidden" name="form-name" value="contact" />
       <p className="hidden">
         <label>
@@ -97,12 +99,14 @@ export default function ContactForm() {
         </label>
       </p>
 
+      {/* Success Message */}
       {submitStatus === 'success' && (
         <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded">
           Thank you! Your message has been sent successfully.
         </div>
       )}
       
+      {/* Error Message */}
       {submitStatus === 'error' && (
         <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded">
           Sorry, there was an error sending your message. Please try again.
