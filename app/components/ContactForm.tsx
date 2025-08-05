@@ -48,7 +48,7 @@ export default function ContactForm() {
     setSubmitStatus('idle')
     
     // This function correctly encodes form data for the POST request
-    const encode = ( Record<string, string>) => {
+    const encode = ( Record<string, any>) => {
       return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&")
