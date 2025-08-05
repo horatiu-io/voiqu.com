@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,30 +24,24 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const services = ["Backlinks", "Tracking", "PPC Campaigns", "SEO Strategy"]
-
   const budgetRanges = ["< $5,000", "$5,000 - $15,000", "$15,000 - $100,000", "+$100,000"]
 
   const handleServiceChange = (service: string, checked: boolean) => {
-    if (checked) {
-      setFormData((prev) => ({
-        ...prev,
-        interestedServices: [...prev.interestedServices, service],
-      }))
-    } else {
-      setFormData((prev) => ({
-        ...prev,
-        interestedServices: prev.interestedServices.filter((s) => s !== service),
-      }))
-    }
-  }
+    setFormData((prev) => {
+      const newServices = checked
+        ? [...prev.interestedServices, service]
+        : prev.interestedServices.filter((s) => s !== service);
+      return { ...prev, interestedServices: newServices };
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-    
-    // This function correctly encodes form data for the POST request
-    const encode = ( { [key: string]: any }) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    // THIS IS THE FINAL, CORRECTED SYNTAX
+    const encode = ( Record<string, any>) => {
       return Object.keys(data)
         .map(
           (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
@@ -57,20 +50,18 @@ export default function ContactForm() {
     };
 
     try {
-      const submitData = {
-        "form-name": "contact",
-        ...formData,
-        interestedServices: formData.interestedServices.join(', '),
-      }
-
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(submitData)
-      })
+        body: encode({
+          "form-name": "contact",
+          ...formData,
+          interestedServices: formData.interestedServices.join(", "),
+        }),
+      });
 
       if (response.ok) {
-        setSubmitStatus('success')
+        setSubmitStatus('success');
         setFormData({
           fullName: "",
           companyName: "",
@@ -79,36 +70,33 @@ export default function ContactForm() {
           projectDescription: "",
           interestedServices: [],
           budgetRange: "",
-        })
+        });
       } else {
-        setSubmitStatus('error')
+        setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Error:', error)
-      setSubmitStatus('error')
+      console.error('Error:', error);
+      setSubmitStatus('error');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
-    // UPDATED: Added name, data-netlify, and data-netlify-honeypot attributes
-    <form 
+    <form
       name="contact"
-      onSubmit={handleSubmit} 
-      className="space-y-6" 
+      onSubmit={handleSubmit}
+      className="space-y-6"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      {/* This hidden input MUST match the form's name attribute */}
       <input type="hidden" name="form-name" value="contact" />
-      {/* This is the honeypot field to prevent spam */}
       <p className="hidden">
         <label>
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
       </p>
-      
+
       {submitStatus === 'success' && (
         <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded">
           Thank you! Your message has been sent successfully.
@@ -121,7 +109,6 @@ export default function ContactForm() {
         </div>
       )}
 
-      {/* ... (rest of your input fields like fullName, companyName, etc. are correct) ... */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="fullName" className="text-white">Full Name *</Label>
@@ -146,7 +133,6 @@ export default function ContactForm() {
         <Label htmlFor="projectDescription" className="text-white">Tell me about your project</Label>
         <Textarea id="projectDescription" name="projectDescription" rows={4} value={formData.projectDescription} onChange={(e) => setFormData((prev) => ({ ...prev, projectDescription: e.target.value }))} className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"/>
       </div>
-
       <div>
         <Label className="text-white mb-3 block">Interested Services</Label>
         <div className="grid grid-cols-2 gap-3">
@@ -154,7 +140,6 @@ export default function ContactForm() {
             <div key={service} className="flex items-center space-x-2">
               <Checkbox 
                 id={service} 
-                // UPDATED: Added name attribute for Netlify
                 name="interestedServices"
                 value={service}
                 checked={formData.interestedServices.includes(service)}
@@ -165,11 +150,9 @@ export default function ContactForm() {
           ))}
         </div>
       </div>
-
       <div>
         <Label className="text-white mb-3 block">Budget Range</Label>
         <RadioGroup
-          // UPDATED: Added name attribute for Netlify
           name="budgetRange"
           value={formData.budgetRange}
           onValueChange={(value) => setFormData((prev) => ({ ...prev, budgetRange: value }))}
@@ -182,7 +165,6 @@ export default function ContactForm() {
           ))}
         </RadioGroup>
       </div>
-
       <Button
         type="submit"
         disabled={isSubmitting}
