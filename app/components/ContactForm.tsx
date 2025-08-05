@@ -40,8 +40,6 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // This function takes an object and URL-encodes it for the form submission.
-    // The syntax is now corrected to include the 'data' parameter name.
     const encode = (data: Record<string, any>) => {
       return Object.keys(data)
         .map(
@@ -91,7 +89,7 @@ export default function ContactForm() {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      {/* Hidden input for Netlify to identify the form */}
+      {/* This hidden input is still needed for the JS submission to work with Netlify. */}
       <input type="hidden" name="form-name" value="contact" />
       <p className="hidden">
         <label>
