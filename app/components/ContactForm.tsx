@@ -1,4 +1,8 @@
 "use client"
+
+import type React from "react"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -7,9 +11,42 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    companyName: "",
+    workEmail: "",
+    phoneNumber: "",
+    projectDescription: "",
+    interestedServices: [] as string[],
+    budgetRange: "",
+  })
+
+  const services = ["Backlinks", "Tracking", "PPC Campaigns", "SEO Strategy"]
+
+  const budgetRanges = ["< $5,000", "$5,000 - $15,000", "$15,000 - $100,000", "+$100,000"]
+
+  const handleServiceChange = (service: string, checked: boolean) => {
+    if (checked) {
+      setFormData((prev) => ({
+        ...prev,
+        interestedServices: [...prev.interestedServices, service],
+      }))
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        interestedServices: prev.interestedServices.filter((s) => s !== service),
+      }))
+    }
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+    // Handle form submission here
+  }
+
   return (
-    <form data-netlify="true" name="contact" className="space-y-6">
-      <input type="hidden" name="form-name" value="contact" />
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="fullName" className="text-white">
@@ -18,7 +55,8 @@ export default function ContactForm() {
           <Input
             id="fullName"
             required
-            defaultValue=""
+            value={formData.fullName}
+            onChange={(e) => setFormData((prev) => ({ ...prev, fullName: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -28,7 +66,8 @@ export default function ContactForm() {
           </Label>
           <Input
             id="companyName"
-            defaultValue=""
+            value={formData.companyName}
+            onChange={(e) => setFormData((prev) => ({ ...prev, companyName: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -43,7 +82,8 @@ export default function ContactForm() {
             id="workEmail"
             type="email"
             required
-            defaultValue=""
+            value={formData.workEmail}
+            onChange={(e) => setFormData((prev) => ({ ...prev, workEmail: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -54,7 +94,8 @@ export default function ContactForm() {
           <Input
             id="phoneNumber"
             type="tel"
-            defaultValue=""
+            value={formData.phoneNumber}
+            onChange={(e) => setFormData((prev) => ({ ...prev, phoneNumber: e.target.value }))}
             className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
           />
         </div>
@@ -67,7 +108,8 @@ export default function ContactForm() {
         <Textarea
           id="projectDescription"
           rows={4}
-          defaultValue=""
+          value={formData.projectDescription}
+          onChange={(e) => setFormData((prev) => ({ ...prev, projectDescription: e.target.value }))}
           className="bg-[#0D0D0D] border-gray-700 text-white focus:border-cyan-500"
         />
       </div>
@@ -75,60 +117,31 @@ export default function ContactForm() {
       <div>
         <Label className="text-white mb-3 block">Interested Services</Label>
         <div className="grid grid-cols-2 gap-3">
-          <div key="Backlinks" className="flex items-center space-x-2">
-            <Checkbox id="Backlinks" />
-            <Label htmlFor="Backlinks" className="text-gray-300">
-              Backlinks
-            </Label>
-          </div>
-          <div key="Tracking" className="flex items-center space-x-2">
-            <Checkbox id="Tracking" />
-            <Label htmlFor="Tracking" className="text-gray-300">
-              Tracking
-            </Label>
-          </div>
-          <div key="PPC Campaigns" className="flex items-center space-x-2">
-            <Checkbox id="PPC Campaigns" />
-            <Label htmlFor="PPC Campaigns" className="text-gray-300">
-              PPC Campaigns
-            </Label>
-          </div>
-          <div key="SEO Strategy" className="flex items-center space-x-2">
-            <Checkbox id="SEO Strategy" />
-            <Label htmlFor="SEO Strategy" className="text-gray-300">
-              SEO Strategy
-            </Label>
-          </div>
+          {services.map((service) => (
+            <div key={service} className="flex items-center space-x-2">
+              <Checkbox id={service} onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)} />
+              <Label htmlFor={service} className="text-gray-300">
+                {service}
+              </Label>
+            </div>
+          ))}
         </div>
       </div>
 
       <div>
         <Label className="text-white mb-3 block">Budget Range</Label>
-        <RadioGroup className="grid grid-cols-2 gap-3">
-          <div key="budget1" className="flex items-center space-x-2">
-            <RadioGroupItem value="budget1" id="budget1" />
-            <Label htmlFor="budget1" className="text-gray-300">
-              {"< $5,000"}
-            </Label>
-          </div>
-          <div key="budget2" className="flex items-center space-x-2">
-            <RadioGroupItem value="budget2" id="budget2" />
-            <Label htmlFor="budget2" className="text-gray-300">
-              {"$5,000 - $15,000"}
-            </Label>
-          </div>
-          <div key="budget3" className="flex items-center space-x-2">
-            <RadioGroupItem value="budget3" id="budget3" />
-            <Label htmlFor="budget3" className="text-gray-300">
-              {"$15,000 - $100,000"}
-            </Label>
-          </div>
-          <div key="budget4" className="flex items-center space-x-2">
-            <RadioGroupItem value="budget4" id="budget4" />
-            <Label htmlFor="budget4" className="text-gray-300">
-              {"+$100,000"}
-            </Label>
-          </div>
+        <RadioGroup
+          value={formData.budgetRange}
+          onValueChange={(value) => setFormData((prev) => ({ ...prev, budgetRange: value }))}
+        >
+          {budgetRanges.map((range) => (
+            <div key={range} className="flex items-center space-x-2">
+              <RadioGroupItem value={range} id={range} />
+              <Label htmlFor={range} className="text-gray-300">
+                {range}
+              </Label>
+            </div>
+          ))}
         </RadioGroup>
       </div>
 
