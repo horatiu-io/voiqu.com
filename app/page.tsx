@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
-import { Search, Rocket, TrendingUp, ArrowRight, CheckCircle } from "lucide-react"
+import { Database, Zap, Cog, LineChart, ArrowRight } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link" // Import Link for scrolling
+import Link from "next/link"
 import ContactForm from "./components/ContactForm"
 import LogoCarousel from "./components/LogoCarousel"
 
@@ -16,27 +16,29 @@ export default function Home() {
 
   const steps = [
     {
-      icon: Search,
-      title: "Discovery & Data Audit",
-      description: "I dive deep into your analytics and customer journey to find key growth opportunities.",
+      number: "01",
+      icon: Database,
+      title: "Data Audit",
+      description: "Deep dive into analytics and customer journey.",
     },
     {
-      icon: Rocket,
-      title: "Strategy & Execution",
-      description: "I design and launch targeted campaigns and A/B tests to move the needle.",
+      number: "02",
+      icon: Zap,
+      title: "Strategy",
+      description: "Defining KPIs and architecting automation.",
     },
     {
-      icon: TrendingUp,
+      number: "03",
+      icon: Cog,
+      title: "System Implementation",
+      description: "Implementation of campaigns and integrations.",
+    },
+    {
+      number: "04",
+      icon: LineChart,
       title: "Analysis & Iteration",
-      description: "I measure what matters, learn from the results, and continuously optimize for performance.",
+      description: "Continuous optimization of ROAS and LTV.",
     },
-  ]
-
-  const benefits = [
-    "Data-driven growth strategies",
-    "Conversion rate optimization",
-    "Full-funnel marketing approach",
-    "Continuous performance monitoring",
   ]
 
   return (
@@ -45,52 +47,49 @@ export default function Home() {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-red-500/20 border border-cyan-500/30 rounded-full mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-red-500/20 border border-cyan-500/30 rounded-full mb-8">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
               <span className="text-white text-sm font-medium">Google Partner Certified</span>
             </div>
 
-            {/* Main Headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight">
-              I Build Growth Engines for{" "}
+              Growth Engines for{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
-                B2B SaaS & E-commerce.
+                B2B SaaS & E-comm
               </span>
             </h1>
 
-            {/* Subtitle */}
             <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you
-              scale beyond your current limitations.
+              Senior Growth Consultant blending Data, AI, and Automation. Ex-Head of Digital, helped scale brands to
+              €22M+ revenue.
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link href="#contact-form-section" scroll={true}>
-                <Button className="bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-8 py-4 text-lg h-auto rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
+                <Button className="bg-cyan-500 hover:bg-cyan-600 text-black px-8 py-4 text-lg h-auto rounded-xl font-semibold shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                  BOOK STRATEGY AUDIT
+                </Button>
+              </Link>
+              <Link href="#contact-form-section" scroll={true}>
+                <Button
+                  variant="outline"
+                  className="border border-cyan-500/50 text-white hover:bg-cyan-500/10 px-8 py-4 text-lg h-auto rounded-xl font-semibold transition-all duration-300 bg-transparent"
+                >
                   Get Proposal
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
             </div>
-
-            {/* Benefits List */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center justify-center md:justify-start">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof Section */}
+      {/* Logo Carousel Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1A1A1A] overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400 mb-8 text-sm uppercase tracking-wide font-medium">Trusted by leading brands</p>
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center text-gray-400 mb-8 text-sm uppercase tracking-wide font-medium">
+            Systems Deployed For
+          </p>
           {/* Mobile Carousel */}
           <div className="block md:hidden">
             <LogoCarousel />
@@ -114,24 +113,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How We Work Section */}
+      {/* Method Section - The Protocol */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">A Partnership for Growth</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              My proven 3-step process to accelerate your business with data-driven precision
+              My proven 4-step process to accelerate your business with data-driven precision
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300">
-                  <step.icon className="w-8 h-8 text-white" />
+              <div
+                key={index}
+                className="group relative p-6 bg-[#1A1A1A] border border-gray-800 rounded-xl hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
+              >
+                {/* Number badge */}
+                <div className="text-5xl font-bold text-gray-800 mb-4 group-hover:text-cyan-500/20 transition-colors">
+                  {step.number}
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">{step.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{step.description}</p>
+
+                {/* Icon */}
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-red-500 rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300">
+                  <step.icon className="w-6 h-6 text-white" />
+                </div>
+
+                {/* Title and Description */}
+                <h3 className="text-lg font-semibold mb-3 text-white">{step.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -143,39 +153,60 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
-                13
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
+                13+
               </div>
-              <div className="text-gray-300">Years of experience</div>
+              <div className="text-gray-400">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
                 10
               </div>
-              <div className="text-gray-300">Years in the Google Partners program</div>
+              <div className="text-gray-400">Years Google Partner</div>
             </div>
             <div>
-              <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent mb-2">
                 +1M €
               </div>
-              <div className="text-gray-300">Google Ads Spent</div>
+              <div className="text-gray-400">Ad Spend Managed</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Contact Section - The Terminal */}
       <section id="contact-form-section" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Grow Your Business?</h2>
-            <p className="text-xl text-gray-300">
-              Let's discuss how I can accelerate your growth with proven strategies
-            </p>
-          </div>
+          <div className="bg-[#0A0A0A] border border-cyan-500/30 rounded-lg overflow-hidden shadow-2xl">
+            {/* Terminal Header */}
+            <div className="bg-gradient-to-r from-cyan-500/10 to-red-500/10 border-b border-cyan-500/20 px-4 py-3 flex items-center gap-2">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500/60"></div>
+              </div>
+              <span className="text-gray-400 text-sm font-mono ml-4">growth-sequence.sh</span>
+            </div>
 
-          <div className="bg-[#1A1A1A] p-8 rounded-2xl border border-gray-800 shadow-2xl">
-            <ContactForm />
+            {/* Terminal Content */}
+            <div className="p-8 font-mono text-sm">
+              <div className="mb-4">
+                <span className="text-cyan-400">$</span>
+                <span className="text-white ml-2">Let's initialize your growth sequence</span>
+              </div>
+
+              <ContactForm />
+
+              <div className="mt-8 pt-6 border-t border-gray-800">
+                <button
+                  type="submit"
+                  form="contact-form"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-6 py-4 rounded-lg font-mono font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 uppercase tracking-wide"
+                >
+                  INITIALIZE_GROWTH_SEQUENCE
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -3,7 +3,6 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -22,7 +21,7 @@ export default function ContactForm() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
   const services = ["Backlinks", "Tracking", "PPC Campaigns", "SEO Strategy"]
 
@@ -44,14 +43,14 @@ export default function ContactForm() {
 
   const encode = (data: Record<string, any>) => {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitStatus('idle')
+    setSubmitStatus("idle")
 
     try {
       const formDataToSubmit = {
@@ -61,7 +60,7 @@ export default function ContactForm() {
         workEmail: formData.workEmail,
         phoneNumber: formData.phoneNumber,
         projectDescription: formData.projectDescription,
-        interestedServices: formData.interestedServices.join(', '), // Convert array to string
+        interestedServices: formData.interestedServices.join(", "), // Convert array to string
         budgetRange: formData.budgetRange,
       }
 
@@ -72,7 +71,7 @@ export default function ContactForm() {
       })
 
       if (response.ok) {
-        setSubmitStatus('success')
+        setSubmitStatus("success")
         // Reset form
         setFormData({
           fullName: "",
@@ -84,11 +83,11 @@ export default function ContactForm() {
           budgetRange: "",
         })
       } else {
-        setSubmitStatus('error')
+        setSubmitStatus("error")
       }
     } catch (error) {
-      console.error('Form submission error:', error)
-      setSubmitStatus('error')
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
     }
@@ -96,24 +95,25 @@ export default function ContactForm() {
 
   return (
     <div>
-      {submitStatus === 'success' && (
+      {submitStatus === "success" && (
         <div className="mb-6 p-4 bg-green-900/20 border border-green-500 rounded-lg">
           <p className="text-green-400">Thank you! Your message has been sent successfully.</p>
         </div>
       )}
-      
-      {submitStatus === 'error' && (
+
+      {submitStatus === "error" && (
         <div className="mb-6 p-4 bg-red-900/20 border border-red-500 rounded-lg">
           <p className="text-red-400">There was an error sending your message. Please try again.</p>
         </div>
       )}
 
-      <form 
-        name="contact" 
-        method="POST" 
-        data-netlify="true" 
+      <form
+        id="contact-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit} 
+        onSubmit={handleSubmit}
         className="space-y-6"
       >
         {/* Hidden bot field */}
@@ -198,10 +198,10 @@ export default function ContactForm() {
           <div className="grid grid-cols-2 gap-3">
             {services.map((service) => (
               <div key={service} className="flex items-center space-x-2">
-                <Checkbox 
-                  id={service} 
+                <Checkbox
+                  id={service}
                   checked={formData.interestedServices.includes(service)}
-                  onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)} 
+                  onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
                 />
                 <Label htmlFor={service} className="text-gray-300">
                   {service}
@@ -210,11 +210,7 @@ export default function ContactForm() {
             ))}
           </div>
           {/* Hidden input for form detection */}
-          <input 
-            type="hidden" 
-            name="interestedServices" 
-            value={formData.interestedServices.join(', ')} 
-          />
+          <input type="hidden" name="interestedServices" value={formData.interestedServices.join(", ")} />
         </div>
 
         <div>
@@ -235,14 +231,6 @@ export default function ContactForm() {
           {/* Hidden input for form detection */}
           <input type="hidden" name="budgetRange" value={formData.budgetRange} />
         </div>
-
-        <Button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isSubmitting ? 'Sending...' : 'Send My Request'}
-        </Button>
       </form>
     </div>
   )
