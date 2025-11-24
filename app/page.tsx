@@ -54,7 +54,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight">
               I Build Growth Engines for{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
-                Ambitious Brands
+                B2B SaaS & E-commerce.
               </span>
             </h1>
 
