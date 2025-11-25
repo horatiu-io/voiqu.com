@@ -65,7 +65,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="#contact-form-section" scroll={true}>
+              <Link href="https://calendar.app.google/7wZPxXhA4n8hDRes9">
                 <Button className="bg-cyan-500 hover:bg-cyan-600 text-black px-8 py-4 text-lg h-auto rounded-xl font-semibold shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
                   BOOK STRATEGY AUDIT
                 </Button>
