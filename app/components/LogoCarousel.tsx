@@ -97,11 +97,6 @@ export default function LogoCarousel() {
           />
         ))}
       </div>
-
-      {/* Company Name Display */}
-      <div className="mt-4">
-        <p className="text-white text-lg font-medium opacity-80">{companies[currentSlide].name}</p>
-      </div>
     </div>
   )
 }
