@@ -53,7 +53,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight">
-              Growth Engines for{" "}
+              Growth Engines for <br />
               <span className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
                 B2B SaaS & E-comm
               </span>
