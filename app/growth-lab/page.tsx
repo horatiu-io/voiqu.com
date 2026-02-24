@@ -23,7 +23,7 @@ export default function GrowthLab() {
     },
     {
       id: 2,
-      title: "Web Analytics Fundamentals: A Complete Guide to Implementation and Optimization",
+      title: "Web Analytics: The Guide to Implementation and Optimization",
       excerpt:
         "We live in a world where documenting that something happened often matters more than how it actually occurred in reality. A doctor's medical chart carries more weight than the actual treatment provided, because the next doctor will base their actions on that documented diagnosis and patient status. The same applies to police officers, lawyers, and accountants—their reports and documentation often matter more than the actual events.",
       category: "Analytics",
