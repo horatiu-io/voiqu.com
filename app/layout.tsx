@@ -8,10 +8,38 @@ import Footer from "./components/Footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+  metadataBase: new URL("https://voiqu.com"),
+  title: {
+    default: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+    template: "%s | Voiqu",
+  },
   description:
     "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
   generator: "v0.dev",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://voiqu.com",
+    siteName: "Voiqu",
+    title: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+    description:
+      "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
+    images: [
+      {
+        url: "/h-voiqu.webp",
+        width: 500,
+        height: 600,
+        alt: "Voiqu - Growth Hacker",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+    description:
+      "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
+    images: ["/h-voiqu.webp"],
+  },
 }
 
 export default function RootLayout({
