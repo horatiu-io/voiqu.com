@@ -133,9 +133,9 @@ export default function BestLLMMonitoringToolsPage() {
 
           <p>
             To uncover exactly how the current Generative Engine Optimization (GEO) software market handles this shift, I ran a massive, live audit. I created accounts across the top AI visibility platforms and tracked Honda.com simultaneously to see how different tools interpreted the exact same brand presence. <em>(Note: For a deep, forensic dive into the granular data and buyer persona performance from this experiment, check out my full write-up on the{" "}
-            <Link href="https://genezio.com/blog/honda-ai-visibility-audit-2026/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
-              Genezio blog: The State of AI Visibility 2026: A Multi-Platform GEO Audit
-            </Link>).</em>
+              <Link href="https://genezio.com/blog/honda-ai-visibility-audit-2026/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                Genezio blog: The State of AI Visibility 2026: A Multi-Platform GEO Audit
+              </Link>).</em>
           </p>
 
           <p>
@@ -182,7 +182,7 @@ export default function BestLLMMonitoringToolsPage() {
 
           {/* 1. Genezio */}
           <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
-            1. Genezio: The Conversational Optimization Platform
+            1. Genezio: The AI Visibility Platform
           </h3>
 
           <ul className="list-disc list-inside ml-4 space-y-1 mb-4">
@@ -552,9 +552,9 @@ export default function BestLLMMonitoringToolsPage() {
 
           <p>
             The era of optimizing for a list of ten blue links is ending. Generative Engine Optimization requires a new approach focused on conversation, context, and citation authority. By leveraging these tools, you can actively manage your AI reputation instead of guessing what ChatGPT thinks of your brand. <em>(For the full side-by-side performance breakdown with real screenshots and data, read:{" "}
-            <Link href="https://genezio.com/blog/honda-ai-visibility-audit-2026/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
-              The State of AI Visibility 2026: A Multi-Platform GEO Audit
-            </Link>).</em>
+              <Link href="https://genezio.com/blog/honda-ai-visibility-audit-2026/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+                The State of AI Visibility 2026: A Multi-Platform GEO Audit
+              </Link>).</em>
           </p>
         </div>
       </div>
