@@ -197,6 +197,17 @@ export default function BestLLMMonitoringToolsPage() {
             <strong>The Honda Audit Findings:</strong> Over 31 days, Genezio analyzed 1,646 conversations and gave Honda a 75% Brand Visibility score. It automatically discovered Honda{"'"}s top competitor was Toyota (80% visibility), followed by Subaru (65%).
           </p>
 
+          {/* Genezio Dashboard Image */}
+          <div className="my-8 rounded-xl overflow-hidden border border-gray-700">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/genezio-honda-audit-dasboard-ycmjSgfpv5Ute12MU9WPham6XzBtib.webp"
+              alt="Genezio Brand Performance Overview dashboard showing Honda's 75% brand visibility, 3,447 total citations, competitor tracking chart, and top 10 competitors by visibility"
+              width={1440}
+              height={820}
+              className="w-full h-auto"
+            />
+          </div>
+
           <p><strong>Key Features:</strong></p>
           <ul className="list-disc list-inside ml-4 space-y-2">
             <li><strong>Multi-Turn Conversations:</strong> Genezio simulates stateful, multi-turn dialogues to see how your brand survives scrutiny.</li>
