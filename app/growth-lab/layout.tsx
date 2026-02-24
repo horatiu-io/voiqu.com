@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description:
       "Deep dives into growth strategies, SEO, analytics, and digital marketing insights from the trenches. Data-driven experiments and actionable guides.",
     url: "https://voiqu.com/growth-lab",
+    type: "article",
     images: [
       {
         url: "/h-voiqu.webp",

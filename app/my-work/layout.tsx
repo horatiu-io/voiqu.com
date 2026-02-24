@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description:
       "Discover my approach to growth marketing: SEO, Google Ads, Facebook Ads, and Analytics. Guided by conscious business principles and data-driven strategies.",
     url: "https://voiqu.com/my-work",
+    type: "website",
     images: [
       {
         url: "/h-voiqu.webp",

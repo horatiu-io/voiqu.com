@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description:
       "Ready to accelerate your growth? Get in touch for a free initial consultation. Custom growth strategy proposals for B2B SaaS and e-commerce brands.",
     url: "https://voiqu.com/contact",
+    type: "website",
     images: [
       {
         url: "/h-voiqu.webp",
