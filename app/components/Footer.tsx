@@ -71,7 +71,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <p className="text-gray-400">© 2025 Voiqu. All rights reserved.</p>
+            <p className="text-gray-400">© 2026 Voiqu. All rights reserved.</p>
             <Link
               href="mailto:h@voiqu.com"
               className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"

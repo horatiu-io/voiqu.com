@@ -12,9 +12,6 @@ export const metadata: Metadata = {
   description:
     "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
   generator: "v0.dev",
-  icons: {
-    icon: "/icon.svg",
-  },
 }
 
 export default function RootLayout({
