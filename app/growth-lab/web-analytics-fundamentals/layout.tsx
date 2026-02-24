@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Web Analytics Fundamentals: A Complete Guide to Implementation and Optimization",
+  title: "Web Analytics: The Guide to Implementation and Optimization",
   description:
     "Master web analytics with this complete guide. Learn essential metrics, tools like GA4 and Clarity, and strategies to optimize your digital presence.",
   openGraph: {
-    title: "Web Analytics Fundamentals: A Complete Guide to Implementation and Optimization",
+    title: "Web Analytics: The Guide to Implementation and Optimization",
     description:
       "Master web analytics with this complete guide. Learn essential metrics, tools like GA4 and Clarity, and strategies to optimize your digital presence.",
     url: "https://voiqu.com/growth-lab/web-analytics-fundamentals",
