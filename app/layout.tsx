@@ -27,11 +27,12 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/h-voiqu.webp",
-        width: 500,
-        height: 600,
         alt: "Voiqu - Growth Hacker",
       },
     ],
+  }, // <-- Aici se închide obiectul openGraph. Pune virgula!
+  other: {
+    "og:logo": "https://voiqu.com/logo.svg",
   },
   twitter: {
     card: "summary_large_image",
