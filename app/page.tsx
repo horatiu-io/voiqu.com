@@ -103,9 +103,8 @@ export default function Home() {
                   alt={company.name}
                   width={company.width}
                   height={company.height}
-                  className={`opacity-60 hover:opacity-100 transition-opacity duration-300 ${
-                    company.invert ? "invert" : ""
-                  } max-h-16 w-auto object-contain`}
+                  className={`opacity-60 hover:opacity-100 transition-opacity duration-300 ${company.invert ? "invert" : ""
+                    } max-h-16 w-auto object-contain`}
                 />
               </div>
             ))}

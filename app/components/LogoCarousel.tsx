@@ -71,9 +71,8 @@ export default function LogoCarousel() {
                   alt={company.name}
                   width={company.width}
                   height={company.height}
-                  className={`opacity-80 hover:opacity-100 transition-opacity duration-300 ${
-                    company.invert ? "invert" : ""
-                  } max-h-16 w-300 object-contain`}
+                  className={`opacity-80 hover:opacity-100 transition-opacity duration-300 ${company.invert ? "invert" : ""
+                    } max-h-16 w-300 object-contain`}
                   priority={index === 0}
                 />
               </div>
@@ -83,18 +82,21 @@ export default function LogoCarousel() {
       </div>
 
       {/* Dot Indicators */}
-      <div className="flex justify-center space-x-2 mt-6">
+      <div className="flex justify-center mt-6">
         {companies.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              index === currentSlide
-                ? "bg-gradient-to-r from-cyan-400 to-red-500 scale-110"
-                : "bg-gray-600 hover:bg-gray-500"
-            }`}
+            className="w-11 h-11 flex items-center justify-center focus:outline-none group"
             aria-label={`Go to slide ${index + 1}`}
-          />
+          >
+            <div
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentSlide
+                  ? "bg-gradient-to-r from-cyan-400 to-red-500 scale-110"
+                  : "bg-gray-600 group-hover:bg-gray-500"
+                }`}
+            />
+          </button>
         ))}
       </div>
     </div>
