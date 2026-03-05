@@ -100,7 +100,7 @@ export default function WebsitePageSpeedGuide2026() {
             "@type": "WebPage",
             "@id": "https://voiqu.com/growth-lab/website-page-speed-guide-2026",
         },
-        headline: "The Ultimate Guide to Website Page Speed in 2026 (And How I Hit 100/100 For Free)",
+        headline: "Website Page Speed in 2026: How to Hit 100/100 For Free",
         image: "/posts/thumbnail-futuristic-data-center.webp",
         datePublished: "2026-03-06T09:00:00+02:00",
         dateModified: "2026-03-06T09:00:00+02:00",
@@ -118,7 +118,7 @@ export default function WebsitePageSpeedGuide2026() {
             },
         },
         description:
-            "A complete guide to achieving a 100/100 Google PageSpeed score. Learn how to optimize Core Web Vitals, format images, implement caching, and leverage modern web architecture for a lightning-fast site.",
+            "Slow sites kill conversions. Learn how I hit a perfect 100/100 Google PageSpeed score for free. Master Core Web Vitals and modern web performance in 2026.",
     }
 
     const postDate = new Date(articleSchema.datePublished).toLocaleDateString("en-US", {
