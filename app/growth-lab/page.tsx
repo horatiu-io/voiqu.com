@@ -8,9 +8,19 @@ import { Button } from "@/components/ui/button"
 export default function GrowthLab() {
   const [activeFilter, setActiveFilter] = useState("All Posts")
 
-  const categories = ["All Posts", "Analytics", "GEO"]
+  const categories = ["All Posts", "Analytics", "GEO", "Performance"]
 
   const articles = [
+    {
+      id: 3,
+      title: "The Ultimate Guide to Website Page Speed in 2026",
+      excerpt:
+        "Nobody purposely designs a slow website, but in today's attention economy, we are no longer fighting for minutes of user engagement, we are fighting for absolute milliseconds. In this guide, I show you how I achieved a flawless 100/100 Google PageSpeed score.",
+      category: "Performance",
+      date: "March 6, 2026",
+      image: "/posts/thumbnail-futuristic-data-center.webp",
+      slug: "website-page-speed-guide-2026",
+    },
     {
       id: 1,
       title: "The 10 Best LLM Monitoring Tools for Brand Visibility in 2026",
