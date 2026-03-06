@@ -99,7 +99,7 @@ export default function WebAnalyticsFundamentalsPage() {
         </div>
 
         {/* Article Content */}
-        <div className="bg-[#1A1A1A] p-6 sm:p-8 md:p-10 rounded-2xl border border-gray-800 shadow-2xl prose prose-invert max-w-none">
+        <div className="bg-[#1A1A1A] p-6 sm:p-8 md:p-10 rounded-2xl border border-gray-800 shadow-2xl prose prose-invert max-w-none [content-visibility:auto]">
 
           <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
             Introduction: Navigating the Digital Landscape with Web Analytics
