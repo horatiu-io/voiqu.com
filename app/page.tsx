@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import ContactForm from "./components/ContactForm"
 import LogoCarousel from "./components/LogoCarousel"
+import LatestExperimentsCarousel from "./components/LatestExperimentsCarousel"
 
 export default function Home() {
   const companies = [
@@ -209,6 +210,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Latest Growth Experiments Section */}
+      <LatestExperimentsCarousel />
     </div>
   )
 }
