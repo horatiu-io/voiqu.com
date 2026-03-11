@@ -12,6 +12,15 @@ export default function GrowthLab() {
 
   const articles = [
     {
+      id: 4,
+      title: "The Ultimate Guide to LLM Brand Visibility & Generative Engine Optimization (GEO)",
+      excerpt: "In 2026, the digital landscape for brands is transforming radically. The rise of generative AI-powered language models means brand visibility now hinges on new strategies. Discover Generative Engine Optimization (GEO).",
+      category: "GEO",
+      date: "March 11, 2026",
+      image: "/posts/The Ultimate Guide to LLM Brand Visibility.webp",
+      slug: "the-ultimate-guide-llm-brand-visibility-geo",
+    },
+    {
       id: 3,
       title: "The Ultimate Guide to Website Page Speed in 2026",
       excerpt:
