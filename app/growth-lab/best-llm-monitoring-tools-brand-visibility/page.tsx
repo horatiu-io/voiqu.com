@@ -45,7 +45,7 @@ export default function BestLLMMonitoringToolsPage() {
       "@id": "https://voiqu.com/growth-lab/best-llm-monitoring-tools-brand-visibility",
     },
     headline: "The 10 Best LLM Monitoring Tools for Brand Visibility in 2026",
-    image: "/posts/thumbnail-10-ai-visibility-tools.webp",
+    image: "https://voiqu.com/posts/thumbnail-10-ai-visibility-tools.webp",
     datePublished: "2026-02-24T09:00:00+02:00",
     dateModified: "2026-02-24T09:00:00+02:00",
     author: {

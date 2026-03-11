@@ -101,7 +101,7 @@ export default function WebsitePageSpeedGuide2026() {
             "@id": "https://voiqu.com/growth-lab/website-page-speed-guide-2026",
         },
         headline: "Website Page Speed in 2026: How to Hit 100/100 For Free",
-        image: "/posts/thumbnail-futuristic-data-center.webp",
+        image: "https://voiqu.com/posts/thumbnail-futuristic-data-center.webp",
         datePublished: "2026-03-06T09:00:00+02:00",
         dateModified: "2026-03-06T09:00:00+02:00",
         author: {

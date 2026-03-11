@@ -34,7 +34,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
             "@id": "https://voiqu.com/growth-lab/the-ultimate-guide-llm-brand-visibility-geo",
         },
         headline: "The Ultimate Guide to LLM Brand Visibility & Generative Engine Optimization (GEO)",
-        image: "/posts/The Ultimate Guide to LLM Brand Visibility.webp",
+        image: "https://voiqu.com/posts/The%20Ultimate%20Guide%20to%20LLM%20Brand%20Visibility.webp",
         datePublished: "2026-03-11T09:00:00+02:00",
         dateModified: "2026-03-11T09:00:00+02:00",
         author: {
@@ -123,7 +123,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
         <div className="min-h-screen bg-[#0D0D0D] text-white py-12 px-4 sm:px-6 lg:px-8">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-            
+
             <div className="max-w-4xl mx-auto">
                 {/* Hero Image */}
                 <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden mb-12 shadow-lg">
@@ -161,7 +161,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
                         <div className="text-sm mt-1">
                             <p>Post Date: {postDate}</p>
                             <p>Last Modified: {lastModified}</p>
-                            <p>Reading Time: ~4 min read</p>
+                            <p>Reading Time: ~7 min read</p>
                         </div>
                     </div>
                 </div>
@@ -468,8 +468,10 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
                         The SEO technology landscape now includes specialized generative AI SEO tools that focus on AI search visibility. Below are some of the <Link href="https://voiqu.com/growth-lab/best-llm-monitoring-tools-brand-visibility" className="text-cyan-400 hover:underline">best AI SEO tools</Link> that work with existing SEO platforms and integrate seamlessly:
                     </p>
 
-                    <h3 className="text-2xl font-bold mb-4 mt-8 bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
-                        Genezio
+                    <h3 className="text-2xl font-bold mb-4 mt-8">
+                        <Link href="https://genezio.com/" target="_blank" rel="noopener" className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                            Genezio AI Visibility Platform
+                        </Link>
                     </h3>
                     <p className="mb-6">
                         Genezio offers advanced AI-driven SEO analysis combined with generative AI capabilities to enhance brand visibility across LLMs with its Content Hub. Its platform helps brands optimize for both classical rankings and AI-centric metrics. Genezio is known for delivering detailed AI mention tracking and sentiment analysis.
@@ -546,7 +548,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
                     <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
                         Frequently Asked Questions (FAQ) about GEO
                     </h2>
-                    
+
                     <div className="space-y-6">
                         <div>
                             <h4 className="text-xl font-bold mb-2">How do I monitor my brand mentions on ChatGPT?</h4>

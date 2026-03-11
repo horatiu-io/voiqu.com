@@ -30,7 +30,7 @@ export default function WebAnalyticsFundamentalsPage() {
       "@id": "https://voiqu.com/growth-lab/web-analytics-fundamentals",
     },
     headline: "Web Analytics: The Guide to Implementation and Optimization",
-    image: "/posts/web-analytics-fundamentals-hero.webp",
+    image: "https://voiqu.com/posts/web-analytics-fundamentals-hero.webp",
     datePublished: "2024-07-29T09:00:00+08:00",
     dateModified: "2024-07-29T09:00:00+08:00",
     author: {
