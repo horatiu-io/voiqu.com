@@ -115,7 +115,7 @@ export default function LatestExperimentsCarousel() {
                                             </div>
                                             <div className="p-6 flex-1 flex flex-col">
                                                 <div className="flex items-center text-sm text-gray-400 mb-4">
-                                                    <span className="bg-blue-500 text-white font-medium px-2.5 py-1 rounded text-xs mr-3">{article.category}</span>
+                                                    <span className="bg-blue-600 text-white font-medium px-2.5 py-1 rounded text-xs mr-3">{article.category}</span>
                                                     <span className="text-gray-400 text-sm">{article.date}</span>
                                                 </div>
                                                 <h3 className="text-xl font-bold mb-3 text-white line-clamp-2 leading-snug group-hover:text-cyan-400 transition-colors duration-200">{article.title}</h3>

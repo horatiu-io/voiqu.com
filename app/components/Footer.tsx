@@ -90,7 +90,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#99A1AE] hover:text-white transition-colors" // Apply specified color here
+                  className="relative text-[#99A1AE] hover:text-white transition-colors flex items-center justify-center after:absolute after:inset-[-12px] after:content-['']"
                   aria-label={social.label}
                 >
                   {social.label === "Reddit Profile" || social.label === "Reddit" ? (

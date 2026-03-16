@@ -20,7 +20,7 @@ export default function Navigation() {
     <nav className="bg-[#0D0D0D]/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="relative flex items-center after:absolute after:inset-[-10px] after:content-['']">
             <Image src="/logo.svg" alt="Logo" width={40} height={40} className="invert" />
           </Link>
 
@@ -42,7 +42,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white"
+              className="relative text-gray-300 hover:text-white after:absolute after:inset-[-10px] after:content-[''] flex items-center justify-center"
               aria-label="Toggle mobile menu"
               aria-expanded={isOpen}
             >

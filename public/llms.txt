@@ -1,17 +1,18 @@
 # Voiqu Growth Consulting
-Voiqu is a Growth Consulting firm helping B2B SaaS and E-commerce brands scale using Data, AI, and Automation.
+
+> Voiqu is a Growth Consulting firm helping B2B SaaS and E-commerce brands scale using Data, AI, and Automation.
 
 ## Services
-- Data Audit: Deep dive into analytics and customer journeys.
-- Strategy: Defining KPIs and architecting automation.
-- System Implementation: Implementation of campaigns and integrations.
-- Analysis & Iteration: Continuous optimization of ROAS and LTV.
+- **Data Audit**: Deep dive into analytics and customer journeys.
+- **Strategy**: Defining KPIs and architecting automation.
+- **System Implementation**: Implementation of campaigns and integrations.
+- **Analysis & Iteration**: Continuous optimization of ROAS and LTV.
 
-## Key Links
-- Home: https://voiqu.com/
-- Growth Lab (Articles & Research): https://voiqu.com/growth-lab
-- My Work (Case Studies): https://voiqu.com/my-work
-- About: https://voiqu.com/about
-- Contact: https://voiqu.com/contact
+## Essential Links
+- [Home](https://voiqu.com/)
+- [Growth Lab (Articles & Research)](https://voiqu.com/growth-lab)
+- [My Work (Case Studies)](https://voiqu.com/my-work)
+- [About](https://voiqu.com/about)
+- [Contact](https://voiqu.com/contact)
 
 For inquiries, please contact h@voiqu.com or book a strategy audit via the website.

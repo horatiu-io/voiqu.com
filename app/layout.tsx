@@ -71,7 +71,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${inter.className} bg-[#0D0D0D] text-white`}>
+      <body className={`${inter.className} bg-[#0D0D0D] text-white`} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

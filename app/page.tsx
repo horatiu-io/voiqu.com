@@ -66,20 +66,21 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="https://calendar.app.google/7wZPxXhA4n8hDRes9">
-                <Button className="bg-cyan-500 hover:bg-cyan-600 text-black px-8 py-4 text-lg h-auto rounded-xl font-semibold shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+              <Button asChild className="bg-cyan-500 hover:bg-cyan-600 text-black px-8 py-4 text-lg h-auto rounded-xl font-semibold shadow-lg hover:shadow-cyan-500/50 transition-all duration-300">
+                <a href="https://calendar.app.google/7wZPxXhA4n8hDRes9" target="_blank" rel="noopener noreferrer">
                   BOOK STRATEGY AUDIT
-                </Button>
-              </Link>
-              <Link href="#contact-form-section" scroll={true}>
-                <Button
-                  variant="outline"
-                  className="border border-cyan-500/50 text-white hover:bg-cyan-500/10 px-8 py-4 text-lg h-auto rounded-xl font-semibold transition-all duration-300 bg-transparent"
-                >
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="border border-cyan-500/50 text-white hover:bg-cyan-500/10 px-8 py-4 text-lg h-auto rounded-xl font-semibold transition-all duration-300 bg-transparent"
+              >
+                <Link href="#contact-form-section" scroll={true}>
                   Get Proposal
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -130,7 +131,7 @@ export default function Home() {
                 className="group relative p-6 bg-[#1A1A1A] border border-gray-800 rounded-xl hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
               >
                 {/* Number badge */}
-                <div className="text-5xl font-bold text-gray-800 mb-4 group-hover:text-cyan-500/20 transition-colors">
+                <div className="text-5xl font-bold text-gray-400 mb-4 group-hover:text-cyan-500/20 transition-colors">
                   {step.number}
                 </div>
 
