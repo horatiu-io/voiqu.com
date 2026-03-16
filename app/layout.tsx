@@ -38,6 +38,8 @@ export const metadata: Metadata = {
       {
         url: "/h-voiqu.webp",
         alt: "Voiqu - Growth Hacker",
+        width: 1200,
+        height: 630,
       },
     ],
   }, // <-- Aici se închide obiectul openGraph. Pune virgula!

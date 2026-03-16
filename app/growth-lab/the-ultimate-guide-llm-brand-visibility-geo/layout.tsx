@@ -15,6 +15,8 @@ export const metadata: Metadata = {
       {
         url: "/posts/The Ultimate Guide to LLM Brand Visibility.webp",
         alt: "The Ultimate Guide to LLM Brand Visibility & GEO",
+        width: 1200,
+        height: 630,
       },
     ],
     publishedTime: "2026-03-11T09:00:00+02:00",

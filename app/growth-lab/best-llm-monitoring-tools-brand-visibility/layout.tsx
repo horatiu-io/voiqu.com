@@ -14,6 +14,8 @@ export const metadata: Metadata = {
       {
         url: "/posts/thumbnail-10-ai-visibility-tools.webp",
         alt: "The 10 Best LLM Monitoring Tools for Brand Visibility in 2026",
+        width: 1200,
+        height: 630,
       },
     ],
     publishedTime: "2026-02-24T09:00:00+02:00",

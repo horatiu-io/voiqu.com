@@ -14,6 +14,8 @@ export const metadata: Metadata = {
             {
                 url: "/posts/thumbnail-futuristic-data-center.webp",
                 alt: "Website Page Speed in 2026: How to Hit 100/100 For Free",
+                width: 1200,
+                height: 630,
             },
         ],
         publishedTime: "2026-03-06T09:00:00+02:00",
