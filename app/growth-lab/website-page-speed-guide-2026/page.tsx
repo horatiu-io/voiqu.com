@@ -48,7 +48,7 @@ export default function WebsitePageSpeedGuide2026() {
 
     It is one thing to talk about theoretical page speed; it is another to actually execute it. When I realized my old WordPress site was dragging its feet, I wanted to see exactly how far I could push modern web architecture. I decided to build a completely new version of voiqu.com using a Blade Runner-inspired dark theme. My goal was maximum performance without paying a single cent for premium hosting or enterprise plugins. Here is a completely transparent teardown of the metrics I achieved.
 
-    Running voiqu.com through Google Lighthouse yielded results that most developers spend weeks trying to achieve. Performance: 100/100. My First Contentful Paint (FCP) hit a strong 0.9 seconds, well under the 2.5-second threshold. The Total Blocking Time (TBT) was barely noticeable at 60ms, meaning the page is instantly interactive for users. Cumulative Layout Shift (CLS) was a perfect 0. Best Practices: 100/100. SEO: 100/100. Accessibility: 96/100 - I am incredibly proud of this, but in the spirit of transparency, the 4-point deduction came from a few low-contrast text elements. This is a common trade-off when designing a heavy, neon-on-dark Blade Runner theme. Sometimes strict contrast ratios clash with a specific aesthetic vibe.
+    Running voiqu.com through Google Lighthouse yielded results that most developers spend weeks trying to achieve. Performance: 100/100. My First Contentful Paint (FCP) hit a strong 0.9 seconds, well under the 2.5-second threshold. The Total Blocking Time (TBT) was barely noticeable at 60ms, meaning the page is instantly interactive for users. Cumulative Layout Shift (CLS) was a perfect 0. Best Practices: 100/100. SEO: 100/100. Accessibility: 100/100 - I am incredibly proud of this.
 
     GTmetrix confirmed the Lighthouse data, proving that the site performs exceptionally well across different testing nodes. Grade A (98% Performance, 98% Structure). Blazing LCP: My Largest Contentful Paint clocked in at an astonishing 726 milliseconds. Ultra-Lean Page Weight: The total page size is 586KB, distributed across just 51 total requests. To put this in perspective, my heaviest asset class was JavaScript at 450KB, while HTML and CSS took up barely a fraction of the payload. Time to Interactive: The site is fully interactive in just 1.1 seconds.
 
@@ -103,7 +103,7 @@ export default function WebsitePageSpeedGuide2026() {
         headline: "Website Page Speed in 2026: How to Hit 100/100 For Free",
         image: "https://voiqu.com/posts/thumbnail-futuristic-data-center.webp",
         datePublished: "2026-03-06T09:00:00+02:00",
-        dateModified: "2026-03-06T09:00:00+02:00",
+        dateModified: "2026-03-16T11:00:00+02:00",
         author: {
             "@type": "Person",
             name: author.name,
@@ -118,7 +118,7 @@ export default function WebsitePageSpeedGuide2026() {
             },
         },
         description:
-            "Slow sites kill conversions. Learn how I hit a perfect 100/100 Google PageSpeed score for free. Master Core Web Vitals and modern web performance in 2026.",
+            "Slow sites kill conversions. Learn how I hit a perfect 100/100 Google PageSpeed score for free. Master Core Web Vitals and modern web performance in 2026 with Google Antigravity.",
     }
 
     const postDate = new Date(articleSchema.datePublished).toLocaleDateString("en-US", {
@@ -357,7 +357,7 @@ export default function WebsitePageSpeedGuide2026() {
                         </li>
                         <li><strong>Best Practices: 100/100</strong></li>
                         <li><strong>SEO: 100/100</strong></li>
-                        <li><strong>Accessibility: 96/100</strong> - I am incredibly proud of this, but in the spirit of transparency, the 4-point deduction came from a few low-contrast text elements. This is a common trade-off when designing a heavy, neon-on-dark Blade Runner theme. Sometimes strict contrast ratios clash with a specific aesthetic vibe.</li>
+                        <li><strong>Accessibility: 100/100</strong> - Achieving this perfect score required meticulous attention to detail. I implemented every single Lighthouse recommendation using Google Antigravity, which allowed me to refine touch targets and color contrast without compromising the Blade Runner aesthetic.</li>
                     </ul>
 
                     <div className="my-8 rounded-xl overflow-hidden border border-gray-700">
