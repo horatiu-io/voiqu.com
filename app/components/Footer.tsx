@@ -93,7 +93,7 @@ export default function Footer() {
                   className="text-[#99A1AE] hover:text-white transition-colors" // Apply specified color here
                   aria-label={social.label}
                 >
-                  {social.label === "Reddit" ? (
+                  {social.label === "Reddit Profile" || social.label === "Reddit" ? (
                     RedditIconSVG // Use the directly embedded SVG for Reddit
                   ) : (
                     <social.icon size={18} />

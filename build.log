@@ -1,0 +1,41 @@
+
+> my-v0-project@0.1.0 build /Users/voiqu/Downloads/GitHub/voiqu.com---main-pages
+> next build
+
+   ▲ Next.js 15.2.6
+   - Experiments (use with caution):
+     ✓ optimizeCss
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/14) ...
+   Generating static pages (3/14) 
+   Generating static pages (6/14) 
+   Generating static pages (10/14) 
+ ✓ Generating static pages (14/14)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                     Size  First Load JS
+┌ ○ /                                                        10.6 kB         137 kB
+├ ○ /_not-found                                                978 B         102 kB
+├ ○ /about                                                     173 B         107 kB
+├ ○ /contact                                                   511 B         121 kB
+├ ○ /growth-lab                                              4.16 kB         120 kB
+├ ○ /growth-lab/best-llm-monitoring-tools-brand-visibility   9.48 kB         126 kB
+├ ○ /growth-lab/the-ultimate-guide-llm-brand-visibility-geo   9.5 kB         126 kB
+├ ○ /growth-lab/web-analytics-fundamentals                   4.84 kB         121 kB
+├ ○ /growth-lab/website-page-speed-guide-2026                15.6 kB         132 kB
+├ ○ /my-work                                                   160 B         101 kB
+└ ○ /sitemap.xml                                               160 B         101 kB
++ First Load JS shared by all                                 101 kB
+  ├ chunks/954-5d0c77480a23b7e2.js                           45.8 kB
+  ├ chunks/cddf2128-0ab23707c01807e6.js                      53.3 kB
+  └ other shared chunks (total)                              1.91 kB
+
+
+○  (Static)  prerendered as static content
+
