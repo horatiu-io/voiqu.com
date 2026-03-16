@@ -3,12 +3,12 @@ import { Linkedin, Mail, Instagram, Music, Twitter, Phone, Facebook } from "luci
 
 export default function Footer() {
   const socialLinks = [
-    { href: "https://www.instagram.com/voiqu/", icon: Instagram, label: "Instagram" },
-    { href: "https://open.spotify.com/user/voiqu-h?si=G0qIL1cnTzOik_GFaFq1XQ", icon: Music, label: "Spotify" },
-    { href: "https://x.com/voiqu", icon: Twitter, label: "Twitter" },
-    { href: "https://www.linkedin.com/in/voiqu/", icon: Linkedin, label: "LinkedIn" },
-    { href: "https://www.reddit.com/user/voiquh", icon: "/icons/reddit-icon.svg", label: "Reddit" }, // Using custom SVG
-    { href: "https://www.facebook.com/voiquh", icon: Facebook, label: "Facebook" },
+    { href: "https://www.instagram.com/voiqu/", icon: Instagram, label: "Instagram Profile" },
+    { href: "https://open.spotify.com/user/voiqu-h?si=G0qIL1cnTzOik_GFaFq1XQ", icon: Music, label: "Spotify Profile" },
+    { href: "https://x.com/voiqu", icon: Twitter, label: "Twitter Profile" },
+    { href: "https://www.linkedin.com/in/voiqu/", icon: Linkedin, label: "LinkedIn Profile" },
+    { href: "https://www.reddit.com/user/voiquh", icon: "/icons/reddit-icon.svg", label: "Reddit Profile" }, // Using custom SVG
+    { href: "https://www.facebook.com/voiquh", icon: Facebook, label: "Facebook Profile" },
     { href: "https://wa.me/40740244298", icon: Phone, label: "WhatsApp" },
   ]
 
