@@ -51,7 +51,7 @@ export default function About() {
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-cyan-900/20 via-[#0D0D0D] to-[#0D0D0D] -z-10 pointer-events-none"></div>
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            
+
             {/* Image Column */}
             <ScrollReveal className="w-full lg:w-5/12 relative">
               <div className="relative w-full aspect-[4/5] max-w-md mx-auto animate-float">
@@ -73,16 +73,16 @@ export default function About() {
             <ScrollReveal className="w-full lg:w-7/12" delay={150}>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-full mb-8">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
-                <span className="text-white text-sm font-medium tracking-wide">Recognized Google Partner</span>
+                <span className="text-white text-sm font-medium tracking-wide">Google Partner</span>
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
                 Hi, I'm <br />
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   Horațiu Voicu.
                 </span>
               </h1>
-              
+
               <div className="space-y-6 text-xl text-gray-300 leading-relaxed max-w-2xl">
                 <p>
                   I am a Senior Growth Consultant trusted with managing over <strong className="text-white font-semibold">€1M+</strong> in advertising budgets.
@@ -103,7 +103,7 @@ export default function About() {
             <div className="relative p-1 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-red-500/20 overflow-hidden group">
               {/* Animated border shimmer effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-100 animate-shimmer transition-opacity duration-1000 blur-md"></div>
-              
+
               <div className="relative bg-[#111] rounded-xl p-8 md:p-12 border border-gray-800 z-10">
                 <div className="max-w-3xl mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Architecting Data-Driven Marketing Systems</h2>
@@ -148,7 +148,7 @@ export default function About() {
               <ScrollReveal key={index} delay={index * 100}>
                 <div className="group relative bg-[#0D0D0D] rounded-2xl p-8 border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:shadow-2xl overflow-hidden accent-bar">
                   <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
-                    
+
                     {/* Left: Icon & Title */}
                     <div className="flex-shrink-0 md:w-1/3">
                       <div className="flex items-center gap-4 mb-3">
@@ -159,14 +159,14 @@ export default function About() {
                       </div>
                       <h3 className="text-lg font-medium text-gray-400">{item.role}</h3>
                     </div>
-                    
+
                     {/* Middle: Description */}
                     <div className="md:w-1/2">
                       <p className="text-gray-300 leading-relaxed pr-4">
                         {item.description}
                       </p>
                     </div>
-                    
+
                     {/* Right: Metric */}
                     <div className="flex-shrink-0 md:w-1/6 md:text-right">
                       <div className="inline-block px-4 py-2 bg-[#1A1A1A] rounded-lg border border-gray-800 group-hover:bg-gray-800 transition-colors">
@@ -188,7 +188,7 @@ export default function About() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
+
             {/* Teaching */}
             <ScrollReveal>
               <div className="flex items-center gap-4 mb-8">
@@ -200,7 +200,7 @@ export default function About() {
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
                 I believe in sharing knowledge and using digital skills for good.
               </p>
-              
+
               <div className="bg-[#151515] rounded-2xl p-8 border border-gray-800 hover:border-blue-500/30 transition-colors relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl group-hover:bg-blue-500/10 transition-colors"></div>
                 <h3 className="text-2xl font-bold text-white mb-2">Guest Lecturer</h3>
@@ -217,7 +217,7 @@ export default function About() {
 
             {/* Volunteering */}
             <ScrollReveal delay={150}>
-               <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 bg-rose-500/10 rounded-xl flex items-center justify-center border border-rose-500/20">
                   <Heart className="w-6 h-6 text-rose-400" />
                 </div>
@@ -229,23 +229,23 @@ export default function About() {
 
               <div className="space-y-6">
                 <div className="bg-[#151515] rounded-xl p-6 border border-gray-800 hover:border-rose-500/30 transition-colors flex gap-6 items-start">
-                   <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 shrink-0">
-                     <span className="text-lg">🇸🇰</span>
-                   </div>
-                   <div>
-                     <h4 className="text-white font-semibold text-lg mb-1">Slovak Red Cross</h4>
-                     <p className="text-gray-400 text-sm leading-relaxed">Audited and implemented robust tracking systems to accurately monitor and optimize donation flows during critical times.</p>
-                   </div>
+                  <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 shrink-0">
+                    <span className="text-lg">🇸🇰</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold text-lg mb-1">Slovak Red Cross</h4>
+                    <p className="text-gray-400 text-sm leading-relaxed">Audited and implemented robust tracking systems to accurately monitor and optimize donation flows during critical times.</p>
+                  </div>
                 </div>
 
                 <div className="bg-[#151515] rounded-xl p-6 border border-gray-800 hover:border-green-500/30 transition-colors flex gap-6 items-start">
-                   <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 shrink-0">
-                     <span className="text-lg">🐼</span>
-                   </div>
-                   <div>
-                     <h4 className="text-white font-semibold text-lg mb-1">WWF Romania</h4>
-                     <p className="text-gray-400 text-sm leading-relaxed">Optimized Google Ad Grants infrastructure to significantly boost their brand awareness and environmental initiatives.</p>
-                   </div>
+                  <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 shrink-0">
+                    <span className="text-lg">🐼</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold text-lg mb-1">WWF Romania</h4>
+                    <p className="text-gray-400 text-sm leading-relaxed">Optimized Google Ad Grants infrastructure to significantly boost their brand awareness and environmental initiatives.</p>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
@@ -261,7 +261,7 @@ export default function About() {
           <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Whether you're looking to navigate the new world of Generative Engine Optimization, overhaul your tracking infrastructure, or build automated growth engines, I'd love to chat.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild className="bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-8 py-6 text-lg h-auto rounded-xl font-semibold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
               <Link href="/contact">
