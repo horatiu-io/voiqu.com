@@ -121,7 +121,7 @@ export default function MyWork() {
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-cyan-900/20 via-[#0D0D0D] to-[#0D0D0D] -z-10 pointer-events-none"></div>
         <div className="absolute top-20 right-0 w-1/2 h-1/2 bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-red-500/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -142,10 +142,6 @@ export default function MyWork() {
                   Build Your Engine
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <div className="inline-flex items-center px-4 py-2 border border-gray-800 rounded-xl text-gray-400 font-medium">
-                  <Database className="w-5 h-5 mr-3 text-cyan-500" />
-                  Data-Driven Ecosystems
-                </div>
               </div>
             </ScrollReveal>
 
@@ -153,7 +149,7 @@ export default function MyWork() {
             <ScrollReveal delay={200} className="hidden lg:flex justify-center relative">
               <div className="relative w-full aspect-square max-w-md animate-float">
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-red-500/20 rounded-full blur-3xl"></div>
-                
+
                 {/* Orbital Rings */}
                 <div className="absolute inset-[10%] border border-cyan-500/30 rounded-full animate-[spin_20s_linear_infinite]">
                   <div className="absolute top-0 left-1/2 w-4 h-4 bg-cyan-400 rounded-full shadow-[0_0_15px_#22d3ee] -translate-x-1/2 -translate-y-1/2"></div>
@@ -161,13 +157,13 @@ export default function MyWork() {
                 <div className="absolute inset-[25%] border border-red-500/30 rounded-full animate-[spin_15s_linear_infinite_reverse]">
                   <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-red-400 rounded-full shadow-[0_0_15px_#f87171] -translate-x-1/2 translate-y-1/2"></div>
                 </div>
-                
+
                 {/* Center Core */}
                 <div className="absolute inset-[40%] bg-gradient-to-br from-gray-800 to-gray-900 rounded-full border border-gray-700 flex items-center justify-center shadow-2xl overflow-hidden">
-                   <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
-                   <Network className="w-16 h-16 text-white z-10 animate-pulse" />
+                  <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+                  <Network className="w-16 h-16 text-white z-10 animate-pulse" />
                 </div>
-                
+
                 {/* Floating Tech Icons */}
                 <div className="absolute top-[15%] left-[15%] w-12 h-12 bg-gray-900 border border-gray-800 rounded-xl flex items-center justify-center shadow-lg">
                   <BarChart3 className="w-6 h-6 text-emerald-400" />
@@ -224,12 +220,12 @@ export default function MyWork() {
             {services.map((service, index) => (
               <ScrollReveal key={index} delay={index * 100}>
                 <div className="group relative bg-[#151515] rounded-3xl p-8 sm:p-10 border border-gray-800 hover:border-gray-600 transition-all duration-500 hover:shadow-2xl overflow-hidden h-full flex flex-col z-10">
-                  
+
                   {/* Large Watermark Icon */}
                   <div className="absolute -bottom-10 -right-10 opacity-[0.03] group-hover:opacity-[0.07] group-hover:scale-110 transition-all duration-700 pointer-events-none z-0">
-                     <service.icon className="w-64 h-64 text-white" />
+                    <service.icon className="w-64 h-64 text-white" />
                   </div>
-                  
+
                   {/* Decorative Top Line */}
                   <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.color} opacity-50 group-hover:opacity-100 transition-opacity`}></div>
 
@@ -243,12 +239,12 @@ export default function MyWork() {
                       <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">{service.title}</h3>
                     </div>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-gray-400 text-lg leading-relaxed mb-10 relative z-10">
                     {service.description}
                   </p>
-                  
+
                   <div className="mt-auto relative z-10">
                     <div className="h-px w-full bg-gradient-to-r from-gray-800 via-gray-700 to-transparent mb-8"></div>
                     {/* Bullets */}
@@ -264,7 +260,7 @@ export default function MyWork() {
                       ))}
                     </ul>
                   </div>
-                  
+
                 </div>
               </ScrollReveal>
             ))}
@@ -284,10 +280,10 @@ export default function MyWork() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            
+
             {/* Option 1: Form Link */}
             <ScrollReveal delay={100} className="h-full">
-               <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-red-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
+              <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-red-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-colors"></div>
 
                 <div className="flex items-center gap-4 mb-8">
@@ -296,40 +292,40 @@ export default function MyWork() {
                   </div>
                   <h3 className="text-2xl font-bold text-white leading-tight">Write me what you need <span className="text-lg font-normal text-gray-400 block mt-1">(if all is clear to you)</span></h3>
                 </div>
-                
+
                 <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
                   Already have a project mapped out, a specific budget in mind, or prefer to lay out the details in writing? Send me the specifics and I'll get back to you with a proposed strategy.
                 </p>
-                
-                <Link 
-                  href="/#contact-form-section" 
+
+                <Link
+                  href="/#contact-form-section"
                   className="flex items-center justify-center w-full bg-[#1A1A1A] hover:bg-white text-white hover:text-black border border-gray-700 hover:border-white px-6 py-5 rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
                 >
                   Submit Project Details
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-               </div>
+              </div>
             </ScrollReveal>
 
             {/* Option 2: Calendar */}
             <ScrollReveal delay={200} className="h-full">
               <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-cyan-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/10 transition-colors"></div>
-                
+
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 font-bold font-mono">
                     2
                   </div>
                   <h3 className="text-2xl font-bold text-white leading-tight">Let’s have a 30-minute chat <span className="text-lg font-normal text-gray-400 block mt-1">(if you are not yet certain)</span></h3>
                 </div>
-                
+
                 <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
                   Not sure where to start or how I can help you win? Let's hop on a call to analyze your goals and see if we're a good fit for building your growth engine.
                 </p>
-                
-                <a 
-                  href="https://calendar.app.google/7wZPxXhA4n8hDRes9" 
-                  target="_blank" 
+
+                <a
+                  href="https://calendar.app.google/7wZPxXhA4n8hDRes9"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-full bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-5 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-1"
                 >
