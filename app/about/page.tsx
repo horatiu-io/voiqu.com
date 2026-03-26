@@ -208,10 +208,6 @@ export default function About() {
                 <p className="text-gray-400 leading-relaxed">
                   Regularly teaching SEO Fundamentals to the next generation of digital professionals, sharing practical industry insights.
                 </p>
-                <div className="mt-8 pt-6 border-t border-gray-800 flex items-center justify-between">
-                  <span className="text-gray-500 italic">Bachelor's Degree in Banking & Finance</span>
-                  <Award className="w-5 h-5 text-gray-600" />
-                </div>
               </div>
             </ScrollReveal>
 
