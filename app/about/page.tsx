@@ -27,7 +27,7 @@ export default function About() {
     {
       company: "MTH.Digital",
       role: "Leading Organic Growth",
-      description: "As SEO Director, I led the department to drive search rankings for major clients like Transavia, Poșta Română, and Bottega Verde.",
+      description: "As SEO Director, I led the department to drive search rankings for major clients like Transavia and Bottega Verde.",
       metric: "SEO Director",
       icon: Search,
       color: "from-green-400 to-emerald-500",
