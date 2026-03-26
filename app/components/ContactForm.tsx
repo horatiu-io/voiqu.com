@@ -23,7 +23,12 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const services = ["Backlinks", "Tracking", "PPC Campaigns", "SEO Strategy"]
+  const services = [
+    "GTM Strategy & Consulting",
+    "Omnichannel PPC (Google Ads, Meta Ads, TikTok Ads, Reddit Ads, Display etc.)",
+    "Tracking, Analytics & Automation",
+    "SEO & GEO (Generative Engine Optimization)",
+  ]
 
   const budgetRanges = ["< $5,000", "$5,000 - $15,000", "$15,000 - $100,000", "+$100,000"]
 

@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "My Work - Philosophy & Services",
+  title: "My Work - Architecting Scalable Growth Engines",
   description:
-    "Discover my approach to growth marketing: SEO, Google Ads, Facebook Ads, and Analytics. Guided by conscious business principles and data-driven strategies.",
+    "Explore my approach to Go-To-Market Strategy, Omnichannel Performance Marketing, Advanced Tracking & SEO/GEO, and AI & Business Automation.",
   openGraph: {
-    title: "My Work - Philosophy & Services",
+    title: "My Work - Architecting Scalable Growth Engines",
     description:
-      "Discover my approach to growth marketing: SEO, Google Ads, Facebook Ads, and Analytics. Guided by conscious business principles and data-driven strategies.",
+      "Explore my approach to Go-To-Market Strategy, Omnichannel Performance Marketing, Advanced Tracking & SEO/GEO, and AI & Business Automation.",
     url: "https://voiqu.com/my-work",
     type: "website",
     images: [
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "My Work - Philosophy & Services",
+    title: "Architecting Scalable Growth Engines",
     description:
-      "Discover my approach to growth marketing: SEO, Google Ads, Facebook Ads, and Analytics. Guided by conscious business principles and data-driven strategies.",
+      "Explore my approach to Go-To-Market Strategy, Omnichannel Performance Marketing, Advanced Tracking & SEO/GEO, and AI & Business Automation.",
     images: ["/h-voiqu.webp"],
   },
 }
