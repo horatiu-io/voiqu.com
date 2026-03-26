@@ -285,20 +285,46 @@ export default function MyWork() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             
-            {/* Option 1: Calendar */}
+            {/* Option 1: Form Link */}
             <ScrollReveal delay={100} className="h-full">
+               <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-red-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-colors"></div>
+
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 border border-red-500/20 font-bold font-mono">
+                    1
+                  </div>
+                  <h3 className="text-2xl font-bold text-white leading-tight">Write me what you need <span className="text-lg font-normal text-gray-400 block mt-1">(if all is clear to you)</span></h3>
+                </div>
+                
+                <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
+                  Already have a project mapped out, a specific budget in mind, or prefer to lay out the details in writing? Send me the specifics and I'll get back to you with a proposed strategy.
+                </p>
+                
+                <Link 
+                  href="/#contact-form-section" 
+                  className="flex items-center justify-center w-full bg-[#1A1A1A] hover:bg-white text-white hover:text-black border border-gray-700 hover:border-white px-6 py-5 rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
+                >
+                  Submit Project Details
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+               </div>
+            </ScrollReveal>
+
+            {/* Option 2: Calendar */}
+            <ScrollReveal delay={200} className="h-full">
               <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-cyan-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/10 transition-colors"></div>
                 
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20">
-                    <Zap className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 font-bold font-mono">
+                    2
                   </div>
-                  <h3 className="text-3xl font-bold text-white">The Fast Track</h3>
+                  <h3 className="text-2xl font-bold text-white leading-tight">Let’s have a 30-minute chat <span className="text-lg font-normal text-gray-400 block mt-1">(if you are not yet certain)</span></h3>
                 </div>
                 
                 <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
-                  Book a free 30-minute discovery call to discuss your business directly. We'll review your channels and outline an initial action plan on the spot.
+                  Not sure where to start or how I can help you win? Let's hop on a call to analyze your goals and see if we're a good fit for building your growth engine.
                 </p>
                 
                 <a 
@@ -311,32 +337,6 @@ export default function MyWork() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </div>
-            </ScrollReveal>
-
-            {/* Option 2: Form Link */}
-            <ScrollReveal delay={200} className="h-full">
-               <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-red-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-colors"></div>
-
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 border border-red-500/20">
-                    <Search className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-white">The Brief</h3>
-                </div>
-                
-                <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
-                  Already have a project mapped out, a specific budget in mind, or prefer to lay out the details in writing? Send me the specifics.
-                </p>
-                
-                <Link 
-                  href="/#contact-form-section" 
-                  className="flex items-center justify-center w-full bg-[#1A1A1A] hover:bg-white text-white hover:text-black border border-gray-700 hover:border-white px-6 py-5 rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
-                >
-                  Submit Project Details
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-               </div>
             </ScrollReveal>
 
           </div>
