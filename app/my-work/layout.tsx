@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "My Work - Architecting Scalable Growth Engines",
+  title: "My Work on GTM Strategy, Omnichannel & Automation | Voiqu",
   description:
-    "Explore my approach to Go-To-Market Strategy, Omnichannel Performance Marketing, Advanced Tracking & SEO/GEO, and AI & Business Automation.",
+    "Bridge the gap between complex data architecture, high-ROI media buying, and AI automation. Discover my systematic approach to scaling your revenue.",
   openGraph: {
-    title: "My Work - Architecting Scalable Growth Engines",
+    title: "My Work on GTM Strategy, Omnichannel & Automation | Voiqu",
     description:
-      "Explore my approach to Go-To-Market Strategy, Omnichannel Performance Marketing, Advanced Tracking & SEO/GEO, and AI & Business Automation.",
+      "Bridge the gap between complex data architecture, high-ROI media buying, and AI automation. Discover my systematic approach to scaling your revenue.",
     url: "https://voiqu.com/my-work",
     type: "website",
     images: [
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Architecting Scalable Growth Engines",
+    title: "My Work on GTM Strategy, Omnichannel & Automation | Voiqu",
     description:
-      "Explore my approach to Go-To-Market Strategy, Omnichannel Performance Marketing, Advanced Tracking & SEO/GEO, and AI & Business Automation.",
+      "Bridge the gap between complex data architecture, high-ROI media buying, and AI automation. Discover my systematic approach to scaling your revenue.",
     images: ["/h-voiqu.webp"],
   },
 }

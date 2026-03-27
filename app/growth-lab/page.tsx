@@ -59,7 +59,7 @@ export default function GrowthLab() {
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Growth Lab: Experiments & Insights</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">Growth Lab: SEO, AI & Marketing Automation</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Deep dives into growth strategies, experiments, and insights from the trenches of digital marketing.
           </p>

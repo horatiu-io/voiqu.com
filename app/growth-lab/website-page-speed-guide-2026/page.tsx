@@ -6,7 +6,7 @@ import { calculateReadingTime } from "@/lib/utils"
 
 export default function WebsitePageSpeedGuide2026() {
     const author = {
-        name: "Voicu Horatiu",
+        name: "Horațiu Voicu",
         linkedin: "https://www.linkedin.com/in/voiqu/",
     }
 

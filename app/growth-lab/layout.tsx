@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Growth Lab - Experiments & Insights",
+  title: "Growth Lab: SEO, AI & Marketing Automation",
   description:
-    "Deep dives into growth strategies, SEO, analytics, and digital marketing insights from the trenches. Data-driven experiments and actionable guides.",
+    "Read the latest growth marketing experiments. Actionable insights on Generative Engine Optimization (GEO), AI tools, SEO, and web analytics.",
   openGraph: {
-    title: "Growth Lab - Experiments & Insights",
+    title: "Growth Lab: SEO, AI & Marketing Automation",
     description:
-      "Deep dives into growth strategies, SEO, analytics, and digital marketing insights from the trenches. Data-driven experiments and actionable guides.",
+      "Read the latest growth marketing experiments. Actionable insights on Generative Engine Optimization (GEO), AI tools, SEO, and web analytics.",
     url: "https://voiqu.com/growth-lab",
     type: "article",
     images: [
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growth Lab - Experiments & Insights",
+    title: "Growth Lab: SEO, AI & Marketing Automation",
     description:
-      "Deep dives into growth strategies, SEO, analytics, and digital marketing insights from the trenches. Data-driven experiments and actionable guides.",
+      "Read the latest growth marketing experiments. Actionable insights on Generative Engine Optimization (GEO), AI tools, SEO, and web analytics.",
     images: ["/h-voiqu.webp"],
   },
 }

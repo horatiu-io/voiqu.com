@@ -6,7 +6,7 @@ import { calculateReadingTime } from "@/lib/utils"
 
 export default function TheUltimateGuideLLMBrandVisibilityGEO() {
     const author = {
-        name: "Voiqu",
+        name: "Horațiu Voicu",
         linkedin: "https://www.linkedin.com/in/voiqu/",
     }
 

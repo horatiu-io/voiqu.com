@@ -17,8 +17,58 @@ import Link from "next/link"
 import ScrollReveal from "../components/ScrollReveal"
 import LogoCarousel from "../components/LogoCarousel"
 import Image from "next/image"
+import Script from "next/script"
 
 export default function MyWork() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "provider": {
+      "@type": "Person",
+      "name": "Horațiu Voicu",
+      "url": "https://voiqu.com"
+    },
+    "serviceType": "Growth Consulting",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Growth Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "GTM Strategy & Executive Workshops",
+            "description": "Mapping out highly profitable, full-funnel digital ecosystems."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Omnichannel Performance Marketing",
+            "description": "High-ROI media buying across Google Ads, Meta Ads, TikTok Ads, and Reddit Ads."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Advanced Tracking & Search Architecture",
+            "description": "GA4 audits, Server-Side Tracking, SEO, and Generative Engine Optimization (GEO)."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI & Business Automation",
+            "description": "Integrating LLMs and n8n to eliminate business bottlenecks."
+          }
+        }
+      ]
+    }
+  };
+
   const services = [
     {
       number: "01",
@@ -116,6 +166,11 @@ export default function MyWork() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D]">
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-cyan-900/20 via-[#0D0D0D] to-[#0D0D0D] -z-10 pointer-events-none"></div>
@@ -125,10 +180,9 @@ export default function MyWork() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight">
-                Architecting <br className="hidden sm:block" />
-                <span className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
-                  Scalable Growth
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-8 text-white leading-tight">
+                My Work on <span className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
+                  GTM Strategy, Omnichannel & Automation
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed font-medium border-l-4 border-cyan-500 pl-6">

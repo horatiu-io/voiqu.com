@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://voiqu.com"),
   title: {
-    default: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+    default: "Growth Marketing for B2B SaaS & E-commerce | Voiqu",
     template: "%s | Voiqu",
   },
   description:
-    "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
+    "Elevate your brand with data-driven growth. Horațiu Voicu is a Senior Growth Consultant blending AI, SEO, and automation to build scalable growth engines.",
   generator: "v0.dev",
   icons: {
     icon: [
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://voiqu.com",
     siteName: "Voiqu",
-    title: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+    title: "Growth Marketing for B2B SaaS & E-commerce | Voiqu",
     description:
-      "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
+      "Elevate your brand with data-driven growth. Horațiu Voicu is a Senior Growth Consultant blending AI, SEO, and automation to build scalable growth engines.",
     images: [
       {
         url: "/h-voiqu.webp",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growth Hacker - I Build Growth Engines for Ambitious Brands",
+    title: "Growth Marketing for B2B SaaS & E-commerce | Voiqu",
     description:
-      "Leveraging data analytics, conversion rate optimization, and full-funnel marketing strategies to help you scale.",
+      "Elevate your brand with data-driven growth. Horațiu Voicu is a Senior Growth Consultant blending AI, SEO, and automation to build scalable growth engines.",
     images: ["/h-voiqu.webp"],
   },
 }

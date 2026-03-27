@@ -2,11 +2,31 @@ import { Button } from "@/components/ui/button"
 import { Database, Zap, Cog, LineChart, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 import ContactForm from "./components/ContactForm"
 import LogoCarousel from "./components/LogoCarousel"
 import LatestExperimentsCarousel from "./components/LatestExperimentsCarousel"
 
 export default function Home() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Horațiu Voicu",
+    "jobTitle": "Senior Growth Consultant",
+    "url": "https://voiqu.com",
+    "sameAs": [
+      "https://linkedin.com/in/voiqu"
+    ],
+    "knowsAbout": [
+      "Generative Engine Optimization",
+      "Growth Marketing",
+      "AI Automation",
+      "Advanced Tracking & SEO",
+      "GTM Strategy",
+      "Omnichannel Performance Marketing"
+    ]
+  };
+
   const companies = [
     { name: "World Class", logo: "/logos/world-class.svg", invert: true, width: 60, height: 24 },
     { name: "WWF", logo: "/logos/wwf.svg", invert: false, width: 90, height: 36 },
@@ -44,6 +64,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D]">
+      <Script
+        id="person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -53,10 +78,10 @@ export default function Home() {
               <span className="text-white text-sm font-medium">Google Partner Certified</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight">
-              Growth Engines for <br />
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight">
+              Growth Marketing for <br />
               <span className="bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
-                B2B SaaS & E-comm
+                B2B SaaS & E-commerce
               </span>
             </h1>
 

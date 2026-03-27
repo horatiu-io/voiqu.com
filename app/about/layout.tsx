@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About - My Story & Career Journey",
+  title: "About Horațiu Voicu | Senior Growth Consultant",
   description:
-    "13+ years in digital marketing. From SEO Monitor to leading digital at Perceptum and MTH Digital. Google Partner since 2015. Currently at Genezio.",
+    "Discover my journey from leading organic growth for top brands to pioneering Generative Engine Optimization (GEO) and AI search strategies. Let's connect!",
   openGraph: {
-    title: "About - My Story & Career Journey",
+    title: "About Horațiu Voicu | Senior Growth Consultant",
     description:
-      "13+ years in digital marketing. From SEO Monitor to leading digital at Perceptum and MTH Digital. Google Partner since 2015. Currently at Genezio.",
+      "Discover my journey from leading organic growth for top brands to pioneering Generative Engine Optimization (GEO) and AI search strategies. Let's connect!",
     url: "https://voiqu.com/about",
     type: "website",
     images: [
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About - My Story & Career Journey",
+    title: "About Horațiu Voicu | Senior Growth Consultant",
     description:
-      "13+ years in digital marketing. From SEO Monitor to leading digital at Perceptum and MTH Digital. Google Partner since 2015. Currently at Genezio.",
+      "Discover my journey from leading organic growth for top brands to pioneering Generative Engine Optimization (GEO) and AI search strategies. Let's connect!",
     images: ["/h-voiqu.webp"],
   },
 }

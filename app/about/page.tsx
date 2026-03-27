@@ -2,9 +2,29 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, BarChart3, Bot, Network, Search, Globe, Award, GraduationCap, Heart, TrendingUp, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Script from "next/script"
 import ScrollReveal from "../components/ScrollReveal"
 
 export default function About() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Horațiu Voicu",
+    "jobTitle": "Senior Growth Consultant",
+    "url": "https://voiqu.com/about",
+    "sameAs": [
+      "https://linkedin.com/in/voiqu"
+    ],
+    "knowsAbout": [
+      "Generative Engine Optimization",
+      "Growth Marketing",
+      "AI Automation",
+      "Advanced Tracking & SEO",
+      "GTM Strategy",
+      "Omnichannel Performance Marketing"
+    ]
+  };
+
   const achievements = [
     {
       company: "Genezio.com",
@@ -46,6 +66,11 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] overflow-hidden">
+      <Script
+        id="person-schema-about"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       {/* 1. Hero Section */}
       <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-cyan-900/20 via-[#0D0D0D] to-[#0D0D0D] -z-10 pointer-events-none"></div>
@@ -76,11 +101,10 @@ export default function About() {
                 <span className="text-white text-sm font-medium tracking-wide">Google Partner</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-                Hi, I'm <br />
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Horațiu Voicu.
-                </span>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+                Hi, I'm <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Horațiu Voicu,
+                </span> Senior Growth Consultant
               </h1>
 
               <div className="space-y-6 text-xl text-gray-300 leading-relaxed max-w-2xl">

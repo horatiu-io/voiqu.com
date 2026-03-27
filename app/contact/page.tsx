@@ -1,15 +1,35 @@
 import { Mail, Linkedin } from "lucide-react"
 import Link from "next/link"
+import Script from "next/script"
 import ContactForm from "../components/ContactForm"
 
 export default function Contact() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Horațiu Voicu",
+      "jobTitle": "Senior Growth Consultant",
+      "url": "https://voiqu.com",
+      "sameAs": [
+        "https://linkedin.com/in/voiqu"
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#0D0D0D] py-20 px-4 sm:px-6 lg:px-8">
+      <Script
+        id="contact-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white">Get in Touch</h1>
+            <h1 className="text-3xl md:text-5xl font-bold mb-8 text-white">Contact Horațiu Voicu, Book a Growth Strategy Audit</h1>
 
             <div className="space-y-6">
               <p className="text-xl text-gray-300 leading-relaxed">

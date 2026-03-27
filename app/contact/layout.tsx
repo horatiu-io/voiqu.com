@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact - Get in Touch",
+  title: "Contact Horațiu Voicu | Book a Growth Strategy Audit",
   description:
-    "Ready to accelerate your growth? Get in touch for a free initial consultation. Custom growth strategy proposals for B2B SaaS and e-commerce brands.",
+    "Ready to scale your business with data-driven precision? Contact Horațiu Voicu to discuss automated growth engines, SEO, and tracking infrastructures.",
   openGraph: {
-    title: "Contact - Get in Touch",
+    title: "Contact Horațiu Voicu | Book a Growth Strategy Audit",
     description:
-      "Ready to accelerate your growth? Get in touch for a free initial consultation. Custom growth strategy proposals for B2B SaaS and e-commerce brands.",
+      "Ready to scale your business with data-driven precision? Contact Horațiu Voicu to discuss automated growth engines, SEO, and tracking infrastructures.",
     url: "https://voiqu.com/contact",
     type: "website",
     images: [
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact - Get in Touch",
+    title: "Contact Horațiu Voicu | Book a Growth Strategy Audit",
     description:
-      "Ready to accelerate your growth? Get in touch for a free initial consultation. Custom growth strategy proposals for B2B SaaS and e-commerce brands.",
+      "Ready to scale your business with data-driven precision? Contact Horațiu Voicu to discuss automated growth engines, SEO, and tracking infrastructures.",
     images: ["/h-voiqu.webp"],
   },
 }
