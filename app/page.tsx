@@ -10,7 +10,7 @@ export default function Home() {
   const companies = [
     { name: "World Class", logo: "/logos/world-class.svg", invert: true, width: 60, height: 24 },
     { name: "WWF", logo: "/logos/wwf.svg", invert: false, width: 90, height: 36 },
-    { name: "Genezio", logo: "https://genezio.com/images/logo-white.svg", invert: false, width: 60, height: 24 },
+    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 60, height: 24 },
     { name: "Answear", logo: "/logos/answear.svg", invert: false, width: 60, height: 24 },
     { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: false, width: 60, height: 24 },
   ]

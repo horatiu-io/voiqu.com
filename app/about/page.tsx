@@ -230,7 +230,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold text-lg mb-1">Slovak Red Cross</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">Audited and implemented robust tracking systems to accurately monitor and optimize donation flows during critical times.</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">Audited and implemented robust tracking systems to accurately monitor and optimize donation flows.</p>
                   </div>
                 </div>
 

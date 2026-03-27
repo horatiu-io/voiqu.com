@@ -86,24 +86,30 @@ export default function GrowthLab() {
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredArticles.map((article) => (
-            <Link key={article.id} href={`/growth-lab/${article.slug}`}>
-              <article className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-colors duration-200 cursor-pointer">
-                <Image
-                  src={article.image || "/placeholder.svg"}
-                  alt={article.title}
-                  width={400}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-400 mb-3">
-                    <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs mr-3">{article.category}</span>
-                    <span>{article.date}</span>
+            <Link key={article.id} href={`/growth-lab/${article.slug}`} className="block h-full">
+              <div className="relative p-1 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-red-500/10 overflow-hidden group h-full">
+                {/* Animated border shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-100 animate-shimmer transition-opacity duration-1000 blur-md"></div>
+
+                <article className="relative bg-[#0D0D0D] rounded-[calc(1rem-4px)] overflow-hidden transition-all duration-300 h-full flex flex-col z-10 border border-gray-800/50">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={article.image || "/placeholder.svg"}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 line-clamp-2">{article.title}</h3>
-                  <p className="text-gray-300 line-clamp-3">{article.excerpt}</p>
-                </div>
-              </article>
+                  <div className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center text-sm text-gray-400 mb-3">
+                      <span className="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2 py-1 rounded text-xs mr-3 font-medium">{article.category}</span>
+                      <span>{article.date}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 line-clamp-2 text-white group-hover:text-cyan-400 transition-colors">{article.title}</h3>
+                    <p className="text-gray-400 line-clamp-3 text-sm leading-relaxed">{article.excerpt}</p>
+                  </div>
+                </article>
+              </div>
             </Link>
           ))}
         </div>

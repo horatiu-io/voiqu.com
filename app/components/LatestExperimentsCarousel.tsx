@@ -102,26 +102,30 @@ export default function LatestExperimentsCarousel() {
                         <div className="flex -ml-6">
                             {articles.map((article) => (
                                 <div key={article.id} className="flex-[0_0_100%] min-w-0 pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.333333%]">
-                                    <Link href={`/growth-lab/${article.slug}`}>
-                                        <article className="bg-[#1A1A1A] border border-gray-800 rounded-lg overflow-hidden hover:bg-gray-800/80 transition-all duration-300 hover:border-cyan-500/30 cursor-pointer h-full flex flex-col group">
-                                            <div className="relative w-full h-48 overflow-hidden">
-                                                <Image
-                                                    src={article.image || "/placeholder.svg"}
-                                                    alt={article.title}
-                                                    width={400}
-                                                    height={200}
-                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                                />
-                                            </div>
-                                            <div className="p-6 flex-1 flex flex-col">
-                                                <div className="flex items-center text-sm text-gray-400 mb-4">
-                                                    <span className="bg-blue-600 text-white font-medium px-2.5 py-1 rounded text-xs mr-3">{article.category}</span>
-                                                    <span className="text-gray-400 text-sm">{article.date}</span>
+                                    <Link href={`/growth-lab/${article.slug}`} className="block h-full">
+                                        <div className="relative p-1 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-red-500/10 overflow-hidden group h-full">
+                                            {/* Animated border shimmer effect */}
+                                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-100 animate-shimmer transition-opacity duration-1000 blur-md"></div>
+
+                                            <article className="relative bg-[#0D0D0D] rounded-[calc(1rem-4px)] overflow-hidden transition-all duration-300 h-full flex flex-col z-10 border border-gray-800/50">
+                                                <div className="relative h-48 overflow-hidden">
+                                                    <Image
+                                                        src={article.image || "/placeholder.svg"}
+                                                        alt={article.title}
+                                                        fill
+                                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                    />
                                                 </div>
-                                                <h3 className="text-xl font-bold mb-3 text-white line-clamp-2 leading-snug group-hover:text-cyan-400 transition-colors duration-200">{article.title}</h3>
-                                                <p className="text-gray-400 line-clamp-3 text-sm leading-relaxed">{article.excerpt}</p>
-                                            </div>
-                                        </article>
+                                                <div className="p-6 flex-1 flex flex-col">
+                                                    <div className="flex items-center text-sm text-gray-400 mb-4">
+                                                        <span className="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2.5 py-1 rounded text-xs mr-3 font-medium">{article.category}</span>
+                                                        <span className="text-gray-400 text-sm">{article.date}</span>
+                                                    </div>
+                                                    <h3 className="text-xl font-bold mb-3 text-white line-clamp-2 leading-snug group-hover:text-cyan-400 transition-colors duration-200">{article.title}</h3>
+                                                    <p className="text-gray-400 line-clamp-3 text-sm leading-relaxed">{article.excerpt}</p>
+                                                </div>
+                                            </article>
+                                        </div>
                                     </Link>
                                 </div>
                             ))}

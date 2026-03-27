@@ -109,7 +109,7 @@ export default function MyWork() {
   const companies = [
     { name: "World Class", logo: "/logos/world-class.svg", invert: true, width: 60, height: 24 },
     { name: "WWF", logo: "/logos/wwf.svg", invert: false, width: 90, height: 36 },
-    { name: "Genezio", logo: "https://genezio.com/images/logo-white.svg", invert: false, width: 60, height: 24 },
+    { name: "Genezio", logo: "/logos/genezio.svg", invert: false, width: 60, height: 24 },
     { name: "Answear", logo: "/logos/answear.svg", invert: false, width: 60, height: 24 },
     { name: "MTH Digital", logo: "/logos/mth-digital.svg", invert: false, width: 60, height: 24 },
   ]
@@ -219,48 +219,49 @@ export default function MyWork() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {services.map((service, index) => (
               <ScrollReveal key={index} delay={index * 100}>
-                <div className="group relative bg-[#151515] rounded-3xl p-8 sm:p-10 border border-gray-800 hover:border-gray-600 transition-all duration-500 hover:shadow-2xl overflow-hidden h-full flex flex-col z-10">
+                <div className="relative p-1 rounded-[2rem] bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-red-500/10 overflow-hidden group h-full">
+                  {/* Animated border shimmer effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-100 animate-shimmer transition-opacity duration-1000 blur-md"></div>
 
-                  {/* Large Watermark Icon */}
-                  <div className="absolute -bottom-10 -right-10 opacity-[0.03] group-hover:opacity-[0.07] group-hover:scale-110 transition-all duration-700 pointer-events-none z-0">
-                    <service.icon className="w-64 h-64 text-white" />
-                  </div>
-
-                  {/* Decorative Top Line */}
-                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.color} opacity-50 group-hover:opacity-100 transition-opacity`}></div>
-
-                  {/* Header */}
-                  <div className="flex items-start gap-6 mb-8 relative z-10">
-                    <div className={`w-16 h-16 ${service.bgClass} rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 border border-gray-800/50`}>
-                      <service.icon className="w-8 h-8 text-white" />
+                  <div className="relative bg-[#0D0D0D] rounded-[calc(2rem-4px)] p-8 sm:p-10 border border-gray-800 transition-all duration-500 h-full flex flex-col z-10">
+                    {/* Large Watermark Icon */}
+                    <div className="absolute -bottom-10 -right-10 opacity-[0.03] group-hover:opacity-[0.07] group-hover:scale-110 transition-all duration-700 pointer-events-none z-0">
+                      <service.icon className="w-64 h-64 text-white" />
                     </div>
-                    <div className="pt-2">
-                      <div className="text-gray-500 font-mono font-bold text-sm mb-2 opacity-50 tracking-wider">SEQUENCE {service.number}</div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">{service.title}</h3>
+
+                    {/* Header */}
+                    <div className="flex items-start gap-6 mb-8 relative z-10">
+
+                      <div className={`w-16 h-16 ${service.bgClass} rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 border border-gray-800/50`}>
+                        <service.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="pt-2">
+                        <div className="text-gray-500 font-mono font-bold text-sm mb-2 opacity-50 tracking-wider">SEQUENCE {service.number}</div>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight">{service.title}</h3>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-gray-400 text-lg leading-relaxed mb-10 relative z-10">
+                      {service.description}
+                    </p>
+
+                    <div className="mt-auto relative z-10">
+                      <div className="h-px w-full bg-gradient-to-r from-gray-800 via-gray-700 to-transparent mb-8"></div>
+                      {/* Bullets */}
+                      <ul className="space-y-6">
+                        {service.bullets.map((bullet, idx) => (
+                          <li key={idx} className="flex items-start gap-5 group/bullet">
+                            <div className={`mt-1.5 w-2 h-2 rounded-full bg-gradient-to-r ${service.color} shrink-0 group-hover/bullet:shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-shadow`}></div>
+                            <div>
+                              <strong className="text-gray-200 block mb-1.5 text-lg group-hover/bullet:text-white transition-colors">{bullet.title}</strong>
+                              <span className="text-gray-500 text-sm leading-relaxed block">{bullet.desc}</span>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
-
-                  {/* Description */}
-                  <p className="text-gray-400 text-lg leading-relaxed mb-10 relative z-10">
-                    {service.description}
-                  </p>
-
-                  <div className="mt-auto relative z-10">
-                    <div className="h-px w-full bg-gradient-to-r from-gray-800 via-gray-700 to-transparent mb-8"></div>
-                    {/* Bullets */}
-                    <ul className="space-y-6">
-                      {service.bullets.map((bullet, idx) => (
-                        <li key={idx} className="flex items-start gap-5 group/bullet">
-                          <div className={`mt-1.5 w-2 h-2 rounded-full bg-gradient-to-r ${service.color} shrink-0 group-hover/bullet:shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-shadow`}></div>
-                          <div>
-                            <strong className="text-gray-200 block mb-1.5 text-lg group-hover/bullet:text-white transition-colors">{bullet.title}</strong>
-                            <span className="text-gray-500 text-sm leading-relaxed block">{bullet.desc}</span>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                 </div>
               </ScrollReveal>
             ))}
@@ -283,55 +284,65 @@ export default function MyWork() {
 
             {/* Option 1: Form Link */}
             <ScrollReveal delay={100} className="h-full">
-              <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-red-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-colors"></div>
+              <div className="relative p-1 rounded-[2rem] bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-red-500/10 overflow-hidden group h-full">
+                {/* Animated border shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 animate-shimmer transition-opacity duration-1000 blur-md"></div>
 
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 border border-red-500/20 font-bold font-mono">
-                    1
+                <div className="bg-[#0D0D0D] border border-gray-800 rounded-[calc(2rem-4px)] p-10 transition-all duration-500 h-full flex flex-col z-10 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-colors"></div>
+
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 border border-red-500/20 font-bold font-mono">
+                      1
+                    </div>
+                    <h3 className="text-2xl font-bold text-white leading-tight">Write me what you need <span className="text-lg font-normal text-gray-400 block mt-1">(if all is clear to you)</span></h3>
                   </div>
-                  <h3 className="text-2xl font-bold text-white leading-tight">Write me what you need <span className="text-lg font-normal text-gray-400 block mt-1">(if all is clear to you)</span></h3>
+
+                  <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
+                    Already have a project mapped out, a specific budget in mind, or prefer to lay out the details in writing? Send me the specifics and I'll get back to you with a proposed strategy.
+                  </p>
+
+                  <Link
+                    href="/#contact-form-section"
+                    className="flex items-center justify-center w-full bg-[#1A1A1A] hover:bg-white text-white hover:text-black border border-gray-700 hover:border-white px-6 py-5 rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
+                  >
+                    Submit Project Details
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
                 </div>
-
-                <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
-                  Already have a project mapped out, a specific budget in mind, or prefer to lay out the details in writing? Send me the specifics and I'll get back to you with a proposed strategy.
-                </p>
-
-                <Link
-                  href="/#contact-form-section"
-                  className="flex items-center justify-center w-full bg-[#1A1A1A] hover:bg-white text-white hover:text-black border border-gray-700 hover:border-white px-6 py-5 rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
-                >
-                  Submit Project Details
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
               </div>
             </ScrollReveal>
 
             {/* Option 2: Calendar */}
             <ScrollReveal delay={200} className="h-full">
-              <div className="bg-[#151515] border border-gray-800 rounded-3xl p-10 hover:border-cyan-500/30 transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/10 transition-colors"></div>
+              <div className="relative p-1 rounded-[2rem] bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-red-500/10 overflow-hidden group h-full">
+                {/* Animated border shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 animate-shimmer transition-opacity duration-1000 blur-md"></div>
 
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 font-bold font-mono">
-                    2
+                <div className="bg-[#0D0D0D] border border-gray-800 rounded-[calc(2rem-4px)] p-10 transition-all duration-500 h-full flex flex-col z-10 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/10 transition-colors"></div>
+
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 font-bold font-mono">
+                      2
+                    </div>
+                    <h3 className="text-2xl font-bold text-white leading-tight">Let’s have a 30-minute chat <span className="text-lg font-normal text-gray-400 block mt-1">(if you are not yet certain)</span></h3>
                   </div>
-                  <h3 className="text-2xl font-bold text-white leading-tight">Let’s have a 30-minute chat <span className="text-lg font-normal text-gray-400 block mt-1">(if you are not yet certain)</span></h3>
+
+                  <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
+                    Not sure where to start or how I can help you win? Let's hop on a call to analyze your goals and see if we're a good fit for building your growth engine.
+                  </p>
+
+                  <a
+                    href="https://calendar.app.google/7wZPxXhA4n8hDRes9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-5 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-1"
+                  >
+                    Book Discovery Call
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
                 </div>
-
-                <p className="text-gray-400 text-lg mb-10 leading-relaxed flex-grow">
-                  Not sure where to start or how I can help you win? Let's hop on a call to analyze your goals and see if we're a good fit for building your growth engine.
-                </p>
-
-                <a
-                  href="https://calendar.app.google/7wZPxXhA4n8hDRes9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-5 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-1"
-                >
-                  Book Discovery Call
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
               </div>
             </ScrollReveal>
 
