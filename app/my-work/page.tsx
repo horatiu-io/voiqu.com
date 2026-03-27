@@ -17,7 +17,6 @@ import Link from "next/link"
 import ScrollReveal from "../components/ScrollReveal"
 import LogoCarousel from "../components/LogoCarousel"
 import Image from "next/image"
-import Script from "next/script"
 
 export default function MyWork() {
   const serviceSchema = {
@@ -166,8 +165,7 @@ export default function MyWork() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D]">
-      <Script
-        id="service-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />

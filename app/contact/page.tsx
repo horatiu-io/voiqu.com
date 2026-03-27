@@ -1,6 +1,5 @@
 import { Mail, Linkedin } from "lucide-react"
 import Link from "next/link"
-import Script from "next/script"
 import ContactForm from "../components/ContactForm"
 
 export default function Contact() {
@@ -20,8 +19,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] py-20 px-4 sm:px-6 lg:px-8">
-      <Script
-        id="contact-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />

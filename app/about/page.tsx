@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, BarChart3, Bot, Network, Search, Globe, Award, GraduationCap, Heart, TrendingUp, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Script from "next/script"
 import ScrollReveal from "../components/ScrollReveal"
 
 export default function About() {
@@ -66,8 +65,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] overflow-hidden">
-      <Script
-        id="person-schema-about"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />

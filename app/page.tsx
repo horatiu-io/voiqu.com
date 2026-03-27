@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Database, Zap, Cog, LineChart, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import Script from "next/script"
 import ContactForm from "./components/ContactForm"
 import LogoCarousel from "./components/LogoCarousel"
 import LatestExperimentsCarousel from "./components/LatestExperimentsCarousel"
@@ -64,8 +63,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D]">
-      <Script
-        id="person-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
