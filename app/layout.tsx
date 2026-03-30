@@ -70,6 +70,14 @@ export default function RootLayout({
           }}
         />
         {/* End Google Tag Manager */}
+        <link
+          rel="preload"
+          href="https://cdn-cookieyes.com/assets/images/revisit.svg"
+          as="image"
+          type="image/svg+xml"
+          crossOrigin="anonymous"
+          fetchPriority="high"
+        />
       </head>
       <body className={`${inter.className} bg-[#0D0D0D] text-white`} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
