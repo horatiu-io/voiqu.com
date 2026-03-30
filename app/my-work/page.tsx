@@ -215,7 +215,7 @@ export default function MyWork() {
 
                 {/* Center Core */}
                 <div className="absolute inset-[40%] bg-gradient-to-br from-gray-800 to-gray-900 rounded-full border border-gray-700 flex items-center justify-center shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+
                   <Network className="w-16 h-16 text-white z-10 animate-pulse" />
                 </div>
 
@@ -238,7 +238,7 @@ export default function MyWork() {
       {/* Trust / Logos Section */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 border-y border-gray-900 bg-[#111]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-center text-gray-500 mb-6 text-sm uppercase tracking-widest font-semibold">
+          <p className="text-center text-gray-400 mb-6 text-sm uppercase tracking-widest font-semibold">
             Architecting growth for industry leaders
           </p>
           <div className="block md:hidden">
@@ -326,7 +326,7 @@ export default function MyWork() {
 
       {/* Contact Options Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-b from-[#0D0D0D] to-[#111]" id="contact">
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] pointer-events-none"></div>
+
         <div className="max-w-5xl mx-auto relative z-10">
           <ScrollReveal className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Ready to Scale?</h2>

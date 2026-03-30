@@ -5,10 +5,10 @@ import { ArrowRight, Zap, TrendingDown, LineChart, Database } from "lucide-react
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
-import { preload } from "react-dom";
+
 
 export default function DynamicHero() {
-  preload("https://grainy-gradients.vercel.app/noise.svg", { as: "image", fetchPriority: "high" });
+
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isClient, setIsClient] = useState(false);
@@ -52,7 +52,7 @@ export default function DynamicHero() {
       <div className="absolute bottom-0 left-0 w-1/3 h-[500px] bg-cyan-600/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
 
       {/* Grain Overlay */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] pointer-events-none z-0 mix-blend-overlay"></div>
+
 
       <div className="max-w-7xl mx-auto relative z-10 w-full py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -122,7 +122,7 @@ export default function DynamicHero() {
 
               {/* Central Component */}
               <div className="absolute inset-[40%] bg-gradient-to-br from-[#111] to-[#050505] rounded-full border border-cyan-800 flex items-center justify-center shadow-[0_0_60px_rgba(6,182,212,0.15)] group hover:scale-105 transition-transform duration-500 cursor-crosshair">
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30 mix-blend-overlay"></div>
+
                 <Zap className="w-14 h-14 text-cyan-400 animate-pulse drop-shadow-[0_0_15px_rgba(34,211,238,0.7)] group-hover:text-red-400 transition-colors duration-500" />
               </div>
 

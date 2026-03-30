@@ -114,7 +114,7 @@ export default function Home() {
       {/* Trust / Logos Section */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 border-y border-gray-900 bg-[#111]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-center text-gray-500 mb-6 text-sm uppercase tracking-widest font-semibold">
+          <p className="text-center text-gray-400 mb-6 text-sm uppercase tracking-widest font-semibold">
             Deploying Growth Systems For
           </p>
           <div className="block md:hidden">
@@ -210,7 +210,7 @@ export default function Home() {
 
       {/* Contact Section - The Terminal */}
       <section id="contact-form-section" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0D0D0D] relative">
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] pointer-events-none"></div>
+
         <div className="max-w-4xl mx-auto relative z-10">
           <ScrollReveal className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Initialize Your Growth Sequence</h2>
