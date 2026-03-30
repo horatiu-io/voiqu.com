@@ -5,8 +5,11 @@ import { ArrowRight, Zap, TrendingDown, LineChart, Database } from "lucide-react
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
+import { preload } from "react-dom";
 
 export default function DynamicHero() {
+  preload("https://grainy-gradients.vercel.app/noise.svg", { as: "image", fetchPriority: "high" });
+
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isClient, setIsClient] = useState(false);
 
