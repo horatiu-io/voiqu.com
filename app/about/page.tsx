@@ -280,22 +280,28 @@ export default function About() {
             Whether you're looking to navigate the new world of Generative Engine Optimization, overhaul your tracking infrastructure, or build automated growth engines, I'd love to chat.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button asChild className="bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-8 py-6 text-lg h-auto rounded-xl font-semibold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
-              <Link href="/contact">
-                Get in Touch
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="border border-cyan-500/50 text-white hover:bg-cyan-500/10 px-8 py-6 text-lg h-auto rounded-xl font-semibold transition-all duration-300 bg-transparent group"
+          <div className="flex flex-col sm:flex-row gap-6 justify-center text-center">
+            <Link
+              href="/contact"
+              className="relative group/btn overflow-hidden bg-transparent border border-red-500 hover:border-red-400 text-red-500 hover:text-white px-8 py-5 text-lg rounded-[4px] font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] uppercase tracking-wider"
             >
-              <Link href="/my-work">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-500 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+              <span className="relative z-10 flex items-center justify-center">
+                Get in Touch
+                <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/my-work"
+              className="relative group/btn overflow-hidden bg-transparent border border-cyan-500 hover:border-cyan-400 text-cyan-400 hover:text-[#0A0A0A] px-8 py-5 text-lg rounded-[4px] font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] uppercase tracking-wider"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-400 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+              <span className="relative z-10 flex items-center justify-center">
                 View My Services
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+                <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </ScrollReveal>
       </section>

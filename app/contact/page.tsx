@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "lucide-react"
+import { Mail, Linkedin, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "../components/ContactForm"
 
@@ -101,9 +101,13 @@ export default function Contact() {
                 <button
                   type="submit"
                   form="contact-form"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-red-500 hover:from-cyan-600 hover:to-red-600 text-white px-6 py-4 rounded-lg font-mono font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 uppercase tracking-wide"
+                  className="relative group/btn overflow-hidden bg-transparent border border-cyan-500 hover:border-cyan-400 text-cyan-400 hover:text-[#0A0A0A] w-full px-6 py-5 text-lg rounded-[4px] font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] uppercase tracking-wider"
                 >
-                  INITIALIZE_GROWTH_SEQUENCE
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-400 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+                  <span className="relative z-10 flex items-center justify-center">
+                    INITIALIZE_GROWTH_SEQUENCE
+                    <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  </span>
                 </button>
               </div>
             </div>

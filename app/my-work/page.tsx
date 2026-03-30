@@ -190,9 +190,12 @@ export default function MyWork() {
                 Growth doesn't happen in a vacuum. It requires a 360-degree view of your business. Whether you are a fast-moving startup or an established enterprise, I help you bridge the gap between complex data architecture, high-ROI media buying, and cutting-edge automation.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="#contact" className="inline-flex items-center justify-center bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-cyan-500/20">
-                  Build Your Engine
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                <Link href="#contact" className="relative group/btn overflow-hidden bg-transparent border border-cyan-500 hover:border-cyan-400 text-cyan-400 hover:text-[#0A0A0A] inline-flex items-center justify-center px-8 py-4 rounded-[4px] font-mono font-bold text-lg transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-400 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+                  <span className="relative z-10 flex items-center">
+                    Build Your Engine
+                    <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  </span>
                 </Link>
               </div>
             </ScrollReveal>
@@ -356,10 +359,13 @@ export default function MyWork() {
 
                   <Link
                     href="/#contact-form-section"
-                    className="flex items-center justify-center w-full bg-[#1A1A1A] hover:bg-white text-white hover:text-black border border-gray-700 hover:border-white px-6 py-5 rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
+                    className="relative group/btn overflow-hidden bg-transparent border border-red-500 hover:border-red-400 text-red-500 hover:text-white w-full px-6 py-5 text-lg rounded-[4px] font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] uppercase tracking-wider"
                   >
-                    Submit Project Details
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-500 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+                    <span className="relative z-10 flex items-center justify-center">
+                      Submit Project Details
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -389,10 +395,13 @@ export default function MyWork() {
                     href="https://calendar.app.google/7wZPxXhA4n8hDRes9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-full bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-5 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(6,182,212,0.15)] hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] hover:-translate-y-1"
+                    className="relative group/btn overflow-hidden bg-transparent border border-cyan-500 hover:border-cyan-400 text-cyan-400 hover:text-[#0A0A0A] w-full px-6 py-5 text-lg rounded-[4px] font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] uppercase tracking-wider"
                   >
-                    Book Discovery Call
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-400 transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+                    <span className="relative z-10 flex items-center justify-center">
+                      Book Discovery Call
+                      <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                    </span>
                   </a>
                 </div>
               </div>

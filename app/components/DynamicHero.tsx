@@ -75,7 +75,7 @@ export default function DynamicHero() {
             <div className="flex flex-col sm:flex-row gap-5">
               <Button asChild className="relative group overflow-hidden bg-transparent border border-cyan-500 hover:border-cyan-400 text-cyan-400 hover:text-[#0A0A0A] px-8 py-6 text-lg h-auto rounded-[4px] font-mono font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.2)] hover:shadow-[0_0_30px_rgba(6,182,212,0.4)]">
                 <a href="https://calendar.app.google/7wZPxXhA4n8hDRes9" target="_blank" rel="noopener noreferrer">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out -z-10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
                   <span className="relative z-10 flex items-center">
                     Book Strategy Audit
                     <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
