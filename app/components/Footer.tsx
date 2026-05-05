@@ -79,6 +79,21 @@ export default function Footer() {
               <Mail size={16} />
               h@voiqu.com
             </Link>
+            <div className="flex items-center gap-4 text-sm">
+              <Link
+                href="/privacy-policy"
+                className="text-gray-500 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-gray-700">|</span>
+              <Link
+                href="/terms-of-service"
+                className="text-gray-500 hover:text-white transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
 
           <div className="flex items-center gap-6">
