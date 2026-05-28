@@ -8,6 +8,16 @@ import Link from "next/link"
 
 const articles = [
     {
+        id: 5,
+        title: "Where Does ChatGPT Get Its Information? Inside 143,010 Citations From UK Banking Conversations",
+        excerpt:
+            "Across 25,417 simulated ChatGPT conversations about UK retail and commercial banking in 2026, the model cited 143,010 sources, drawn from 4,125 distinct domains. Only 2.57% of those citations pointed to a bank's own website. The other 97.43% came from places most banks have never optimized for, and in many cases have never even audited.",
+        category: "GEO",
+        date: "May 28, 2026",
+        image: "/posts/where-does-chatgpt-get-its-information.webp",
+        slug: "where-does-chatgpt-get-its-information",
+    },
+    {
         id: 4,
         title: "The Ultimate Guide to LLM Brand Visibility & Generative Engine Optimization (GEO)",
         excerpt:

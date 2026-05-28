@@ -474,7 +474,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
                         </Link>
                     </h3>
                     <p className="mb-6">
-                        Genezio offers advanced AI-driven SEO analysis combined with generative AI capabilities to enhance brand visibility across LLMs with its Content Hub. Its platform helps brands optimize for both classical rankings and AI-centric metrics. Genezio is known for delivering detailed AI mention tracking and sentiment analysis.
+                        Genezio offers advanced AI-driven SEO analysis combined with generative AI capabilities to enhance brand visibility across LLMs with its Content Hub. Its platform helps brands optimize for both classical rankings and AI-centric metrics. Genezio is known for delivering detailed AI mention tracking and sentiment analysis. For a live breakdown, read our case study on <Link href="/growth-lab/where-does-chatgpt-get-its-information" className="text-cyan-400 hover:underline">where ChatGPT gets its information</Link> using Genezio banking conversation data.
                     </p>
                     <div className="my-8 rounded-xl overflow-hidden border border-gray-700">
                         <Image

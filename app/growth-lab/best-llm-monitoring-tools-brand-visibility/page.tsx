@@ -561,7 +561,11 @@ export default function BestLLMMonitoringToolsPage() {
             <Link href="/growth-lab/the-ultimate-guide-llm-brand-visibility-geo" className="text-cyan-400 hover:underline">
               The Ultimate Guide to LLM Brand Visibility &amp; GEO
             </Link>{" "}
-            to understand the strategic foundation before diving into tooling. You can also find more data-driven guides in the{" "}
+            to understand the strategic foundation before diving into tooling. To see how these concepts apply to a real-world vertical, read our analysis on{" "}
+            <Link href="/growth-lab/where-does-chatgpt-get-its-information" className="text-cyan-400 hover:underline">
+              where ChatGPT gets its information in UK banking
+            </Link>
+            . You can also find more data-driven guides in the{" "}
             <Link href="/growth-lab" className="text-cyan-400 hover:underline">
               Growth Lab
             </Link>
