@@ -315,7 +315,7 @@ export default function HowIUsen8nToAutomateSEONewslettersAndLinkBuilding() {
             Conclusion: The Logic is Your Real IP
           </h2>
           <p className="mb-6">
-            Tools will always evolve. Whether you use Zapier, Claude Routines, or self-hosted n8n, the platform is just the enabler. The real intellectual property—the thing that gives your business an edge—is the underlying logic.
+            Tools will always evolve. Whether you use Zapier, Claude Routines, or self-hosted n8n, the platform is just the enabler. The real intellectual property—the thing that gives your business an edge—is the underlying logic and the data you collect. When combined, these elements create a defensible moat.
           </p>
           <p className="mb-6">
             By defining the exact steps of your most tedious processes and mapping them into an automated flow, you stop working <em>in</em> your business and start working <em>on</em> it. Automating my link-building research, newsletter curation, and SEO optimization did not just save me hours; it gave me the bandwidth to focus on actual strategy.
