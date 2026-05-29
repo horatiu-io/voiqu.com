@@ -76,7 +76,7 @@ export default function HowIUsen8nToAutomateSEONewslettersAndLinkBuilding() {
         name: "What are the server requirements for running self-hosted n8n?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For moderate use, a basic VPS with 2 vCPUs and 2-4GB RAM (such as a Hetzner or DigitalOcean droplet) running Docker is sufficient.",
+          text: "For moderate use, a basic VPS with 2 vCPUs and 2-4GB RAM (such as a Hetzner or DigitalOcean droplet) running Docker is sufficient. Alternatively, you can repurpose old hardware: for example, you can host n8n successfully on an old 2016 MacBook (running other light services like Homebridge concurrently).",
         },
       },
       {
@@ -341,7 +341,7 @@ export default function HowIUsen8nToAutomateSEONewslettersAndLinkBuilding() {
             <div>
               <h4 className="text-xl font-bold mb-2">What are the server requirements for running self-hosted n8n?</h4>
               <p className="text-gray-300">
-                For moderate use, a basic VPS with 2 vCPUs and 2-4GB RAM (such as a Hetzner or DigitalOcean droplet) running Docker is sufficient.
+                For moderate use, a basic VPS with 2 vCPUs and 2-4GB RAM (such as a Hetzner or DigitalOcean droplet) running Docker is sufficient. Alternatively, you can repurpose old hardware—for instance, you can host n8n successfully on a 10-year-old 2016 MacBook (while running other light services like Homebridge concurrently).
               </p>
             </div>
             <div>
