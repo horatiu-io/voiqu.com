@@ -8,9 +8,18 @@ import { Button } from "@/components/ui/button"
 export default function GrowthLab() {
   const [activeFilter, setActiveFilter] = useState("All Posts")
 
-  const categories = ["All Posts", "Analytics", "GEO", "Performance"]
+  const categories = ["All Posts", "Analytics", "GEO", "Performance", "Automation"]
 
   const articles = [
+    {
+      id: 6,
+      title: "How I Use n8n to Automate SEO, Newsletters, and Link Building (Full Breakdown)",
+      excerpt: "Building your own automation infrastructure might sound like overkill, but the strategic advantage is massive. Here is a full breakdown of three heavily relied-upon workflows running on my self-hosted n8n server, and the business logic that makes them so powerful.",
+      category: "Automation",
+      date: "May 29, 2026",
+      image: "/posts/n8n-automation.webp",
+      slug: "how-i-use-n8n-to-automate-seo-newsletters-and-link-building",
+    },
     {
       id: 5,
       title: "Where Does ChatGPT Get Its Information? Inside 143,010 Citations From UK Banking Conversations",
