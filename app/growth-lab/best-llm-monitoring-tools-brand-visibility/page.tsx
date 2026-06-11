@@ -217,7 +217,7 @@ export default function BestLLMMonitoringToolsPage() {
           </ul>
 
           <p>
-            <strong>Pricing:</strong> Free trial available. Paid plans include Starter ({"€"}199/month), Growth ({"€"}299/month), and Agency ({"€"}999/month).
+            <strong>Pricing:</strong> Free trial available. No fixed tiers. Your plan is shaped by the engines, markets, and volume you actually need.
           </p>
 
           {/* 2. Semrush */}
