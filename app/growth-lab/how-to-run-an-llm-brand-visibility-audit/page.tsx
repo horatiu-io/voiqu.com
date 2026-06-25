@@ -385,7 +385,15 @@ export default function LLMBrandVisibilityAuditPage() {
             Need this deployed for your brand? I build custom LLM visibility audits and tracking infrastructures for enterprise brands.
           </p>
           <p className="mt-2">
-            If your SEO dashboard is green but the models aren't recommending you, that's the exact gap this framework was built to close. Let's fix it: get in touch via the contact form on my homepage or drop me a line directly.
+            If your SEO dashboard is green but the models aren't recommending you, that's the exact gap this framework was built to close. Let's fix it: get in touch via the{" "}
+            <Link href="/#contact-form-section" className="text-cyan-400 hover:underline">
+              contact form on my homepage
+            </Link>{" "}
+            or go to the{" "}
+            <Link href="/contact" className="text-cyan-400 hover:underline">
+              contact page
+            </Link>{" "}
+            to drop me a line directly.
           </p>
         </div>
       </div>
