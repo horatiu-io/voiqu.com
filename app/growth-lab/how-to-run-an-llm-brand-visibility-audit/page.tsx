@@ -41,7 +41,7 @@ export default function LLMBrandVisibilityAuditPage() {
     Citation source analysis. When ChatGPT or Perplexity answers a query in your category, where is it pulling from? In the work I've done with citation-tracking platforms, the overwhelming majority of citations in some verticals come from third-party sources rather than the brand's own domain, which tells you the model doesn't trust or can't cleanly extract from your site directly.
     Topic-level breakdown. Map recommendation rate against the specific product or service topics that actually drive revenue, not vanity queries. A high recommendation rate on a low-value topic is noise.
     For this layer I pull data from a tracking platform that runs persona-based, multi-turn conversations rather than single one-shot prompts, because a single prompt tells you what a model says once, and a real buyer's research journey is a conversation, not a single question. I'm looking for the join: the topics where recommendation rate is collapsing are the same topics where Step 2 flagged thin entity signals and missing structured data. When those two datasets line up, you've found your causal chain, technical debt on the left, lost recommendations on the right.
-    Step 4: Executive Synthesis (The LLM Polish). The final step turns a technical diagnosis into something two very different audiences will act on. I feed the NotebookLM technical docs and the citation dataset into a custom Claude setup (in my case an organization-level skill, but a well-constructed prompt does most of this) whose only job is synthesis, translating debt into business impact.
+    Step 4: Executive Synthesis (The LLM Polish). The final step turns a technical diagnosis into something two very different audiences will act on. I feed the NotebookLM technical docs and the citation dataset into a custom Claude setup whose only job is synthesis, translating debt into business impact.
     The output is split into two modes deliberately:
     Boss Mode (for the CMO/VP): the business narrative. "Recommendation rate on your three highest-LTV product categories dropped from X to Y. The root cause is parseability debt on those category pages, the model can't reliably extract what you offer, so it recommends competitors it understands better. Here's the revenue exposure and the priority order." No jargon. Impact, cause, sequence.
     Operator Mode (for the content/dev team): the punch list. Page-level, prioritized P0/P1/P2. "P0: fix rendered-content divergence on these 12 category pages. P1: add and validate Organization + Product structured data with a consistent @id strategy. P2: restructure answer content so the extractable fact sits in the first 150 words." Falsifiable, assignable, shippable.
@@ -202,7 +202,7 @@ export default function LLMBrandVisibilityAuditPage() {
           </ul>
 
           <p className="mb-6">
-            Optimizing for one does not automatically satisfy the other, but they share a foundation. A site that's a mess for crawlers is almost always worse for LLMs, because the model has even less tolerance for ambiguity than the ranking algorithm does. The dual-engine audit measures both and—this is the part that matters—connects the findings so each one explains the other.
+            Optimizing for one does not automatically satisfy the other, but they share a foundation. A site that's a mess for crawlers is almost always worse for LLMs, because the model has even less tolerance for ambiguity than the ranking algorithm does. The dual-engine audit measures both and connects the findings so each one explains the other.
           </p>
 
           <h2 className="text-3xl font-bold mb-6 mt-12 bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">
@@ -308,7 +308,7 @@ export default function LLMBrandVisibilityAuditPage() {
           </h3>
 
           <p className="mb-6">
-            The final step turns a technical diagnosis into something two very different audiences will act on. I feed the NotebookLM technical docs and the citation dataset into a custom Claude setup (in my case an organization-level skill, but a well-constructed prompt does most of this) whose only job is synthesis, translating debt into business impact.
+            The final step turns a technical diagnosis into something two very different audiences will act on. I feed the NotebookLM technical docs and the citation dataset into a custom Claude setup whose only job is synthesis, translating debt into business impact.
           </p>
 
           {/* Claude Skills Image */}
