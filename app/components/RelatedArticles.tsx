@@ -78,9 +78,9 @@ export default function RelatedArticles({ currentSlug }: RelatedArticlesProps) {
 
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex -ml-6">
+            <div className="flex -ml-6 embla-container">
               {relatedArticles.map((article) => (
-                <div key={article.id} className="flex-[0_0_100%] min-w-0 pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.333333%]">
+                <div key={article.id} className="flex-[0_0_100%] min-w-0 pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.333333%] embla-slide">
                   <Link href={`/growth-lab/${article.slug}`} className="block h-full">
                     <div className="relative p-1 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-red-500/10 overflow-hidden group h-full">
                       {/* Animated border shimmer effect */}

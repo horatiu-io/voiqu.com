@@ -268,3 +268,9 @@ html {
   border-radius: 3px;
   background: linear-gradient(180deg, #06b6d4, #ef4444);
 }
+
+/* Disable transitions on Embla elements to prevent dragging/snapping jank caused by wildcard transition rule */
+.embla-container,
+.embla-slide {
+  transition: none !important;
+}
