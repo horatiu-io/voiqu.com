@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Where Does ChatGPT Get Its Information? Citations in UK Banking | Voiqu",
+  title: "Where Does ChatGPT Get Its Info? UK Banking Citations | Voiqu",
   description:
     "Inside 143,010 citations from 25,417 simulated UK banking conversations: Only 2.57% point to a bank's own site. Here is where the rest come from.",
   keywords: "ChatGPT, GEO, AI search, citations, UK banking, Generative Engine Optimization, brand visibility",
   openGraph: {
-    title: "Where Does ChatGPT Get Its Information? Citations in UK Banking | Voiqu",
+    title: "Where Does ChatGPT Get Its Info? UK Banking Citations | Voiqu",
     description:
       "Inside 143,010 citations from 25,417 simulated UK banking conversations: Only 2.57% point to a bank's own site. Here is where the rest come from.",
     url: "https://voiqu.com/growth-lab/where-does-chatgpt-get-its-information",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Where Does ChatGPT Get Its Information? Citations in UK Banking | Voiqu",
+    title: "Where Does ChatGPT Get Its Info? UK Banking Citations | Voiqu",
     description:
       "Inside 143,010 citations from 25,417 simulated UK banking conversations: Only 2.57% point to a bank's own site. Here is where the rest come from.",
     images: ["/posts/where-does-chatgpt-get-its-information.webp"],
