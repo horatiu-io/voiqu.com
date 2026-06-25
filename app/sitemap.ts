@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 
 // 1. Aici îți vei adăuga DOAR articolele noi, foarte simplu, pe o singură linie:
 const blogPosts = [
+  { slug: "how-to-run-an-llm-brand-visibility-audit", date: "2026-06-25", priority: 0.9, frequency: "weekly" },
   { slug: "how-i-use-n8n-to-automate-seo-newsletters-and-link-building", date: "2026-05-29", priority: 0.9, frequency: "yearly" },
   { slug: "where-does-chatgpt-get-its-information", date: "2026-05-28", priority: 0.9, frequency: "yearly" },
   { slug: "the-ultimate-guide-llm-brand-visibility-geo", date: "2026-03-11", priority: 0.9, frequency: "yearly" },

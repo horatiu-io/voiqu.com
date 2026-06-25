@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { calculateReadingTime } from "@/lib/utils"
+import RelatedArticles from "@/app/components/RelatedArticles"
 
 export default function WhereDoesChatGPTGetItsInformation() {
   const author = {
@@ -406,7 +407,7 @@ export default function WhereDoesChatGPTGetItsInformation() {
           </p>
 
           <p className="mb-6">
-            <strong>Stop measuring AI exposure with GA4.</strong> If your AI strategy is being sized off referral sessions, you are sizing off the 2.57% of activity that produces a click. Server log analysis and conversation-level tracking will surface the other 97.43%. For a full review of tools that track these metrics, see our breakdown of the <Link href="/growth-lab/best-llm-monitoring-tools-brand-visibility" className="text-cyan-400 hover:underline">best LLM monitoring tools for brand visibility</Link>.
+            <strong>Stop measuring AI exposure with GA4.</strong> If your AI strategy is being sized off referral sessions, you are sizing off the 2.57% of activity that produces a click. Server log analysis and conversation-level tracking will surface the other 97.43%. For a full review of tools that track these metrics, see our breakdown of the <Link href="/growth-lab/best-llm-monitoring-tools-brand-visibility" className="text-cyan-400 hover:underline">best LLM monitoring tools for brand visibility</Link>, or read our guide on <Link href="/growth-lab/how-to-run-an-llm-brand-visibility-audit" className="text-cyan-400 hover:underline">how to run an LLM brand visibility audit</Link> to design your own pipeline.
           </p>
 
           <p className="mb-6">
@@ -459,6 +460,7 @@ export default function WhereDoesChatGPTGetItsInformation() {
           </div>
         </div>
       </div>
+      <RelatedArticles currentSlug="where-does-chatgpt-get-its-information" />
     </div>
   )
 }

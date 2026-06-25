@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { calculateReadingTime } from "@/lib/utils"
+import RelatedArticles from "@/app/components/RelatedArticles"
 
 export default function WebsitePageSpeedGuide2026() {
     const author = {
@@ -386,6 +387,7 @@ export default function WebsitePageSpeedGuide2026() {
 
                 </div>
             </div>
+            <RelatedArticles currentSlug="website-page-speed-guide-2026" />
         </div>
     )
 }

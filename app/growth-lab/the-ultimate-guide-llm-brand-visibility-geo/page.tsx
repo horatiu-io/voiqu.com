@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { calculateReadingTime } from "@/lib/utils"
+import RelatedArticles from "@/app/components/RelatedArticles"
 
 export default function TheUltimateGuideLLMBrandVisibilityGEO() {
     const author = {
@@ -327,7 +328,11 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
                         How to Conduct an LLM Brand Visibility Audit (Step-by-Step)
                     </h2>
                     <p className="mb-4">
-                        Conducting a thorough LLM Brand Visibility Audit is essential for understanding your current standing and identifying areas for improvement. Follow this 4-step framework to assess your brand{"'"}s visibility:
+                        Conducting a thorough{" "}
+                        <Link href="/growth-lab/how-to-run-an-llm-brand-visibility-audit" className="text-cyan-400 hover:underline">
+                            LLM Brand Visibility Audit
+                        </Link>{" "}
+                        is essential for understanding your current standing and identifying areas for improvement. Follow this 4-step framework to assess your brand{"'"}s visibility:
                     </p>
                     <ol className="list-decimal list-inside ml-4 space-y-4 mb-6">
                         <li>
@@ -589,6 +594,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
 
                 </div>
             </div>
+            <RelatedArticles currentSlug="the-ultimate-guide-llm-brand-visibility-geo" />
         </div>
     )
 }

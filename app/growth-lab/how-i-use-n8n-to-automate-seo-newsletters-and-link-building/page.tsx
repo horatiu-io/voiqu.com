@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { calculateReadingTime } from "@/lib/utils"
+import RelatedArticles from "@/app/components/RelatedArticles"
 
 export default function HowIUsen8nToAutomateSEONewslettersAndLinkBuilding() {
   const author = {
@@ -359,6 +360,7 @@ export default function HowIUsen8nToAutomateSEONewslettersAndLinkBuilding() {
           </div>
         </div>
       </div>
+      <RelatedArticles currentSlug="how-i-use-n8n-to-automate-seo-newsletters-and-link-building" />
     </div>
   )
 }

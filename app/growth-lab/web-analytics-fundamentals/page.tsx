@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { calculateReadingTime } from "@/lib/utils"
+import RelatedArticles from "@/app/components/RelatedArticles"
 
 export default function WebAnalyticsFundamentalsPage() {
   const author = {
@@ -295,6 +296,7 @@ export default function WebAnalyticsFundamentalsPage() {
           </p>
         </div>
       </div>
+      <RelatedArticles currentSlug="web-analytics-fundamentals" />
     </div>
   )
 }
