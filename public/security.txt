@@ -1,0 +1,7 @@
+# If you discover a security vulnerability in this website, please report it to us.
+Contact: mailto:h@voiqu.com
+Contact: https://voiqu.com/contact
+Expires: 2027-07-01T08:00:00.000Z
+Preferred-Languages: en
+Canonical: https://voiqu.com/.well-known/security.txt
+Canonical: https://voiqu.com/security.txt
