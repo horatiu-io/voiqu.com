@@ -21,6 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/about`, lastModified: new Date("2026-02-24"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/contact`, lastModified: new Date("2026-02-24"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/growth-lab`, lastModified: new Date("2026-02-24"), changeFrequency: "weekly", priority: 0.9 },
+    ...(process.env.NODE_ENV !== "production"
+      ? [
+          {
+            url: `${baseUrl}/geo-analyzer`,
+            lastModified: new Date("2026-07-01"),
+            changeFrequency: "monthly" as const,
+            priority: 0.8,
+          },
+        ]
+      : []),
     { url: `${baseUrl}/privacy-policy`, lastModified: new Date("2026-05-05"), changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/terms-of-service`, lastModified: new Date("2026-05-05"), changeFrequency: "yearly", priority: 0.3 },
   ]
