@@ -10,6 +10,16 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: 8,
+    title: "Is Generative Engine Optimization (GEO) Going to Ruin the Web Like SEO Did?",
+    excerpt:
+      "From the link farms of 2008 to the AI measurement illusion of today: why we are on the verge of repeating search history's worst mistakes, how GEO slop threatens public information, and how to evaluate AI visibility.",
+    category: "GEO",
+    date: "August 12, 2026",
+    image: "/posts/is-geo-going-to-ruin-the-web-like-seo-did.webp",
+    slug: "is-geo-going-to-ruin-the-web-like-seo-did",
+  },
+  {
     id: 7,
     title: "How to Run an LLM Brand Visibility Audit (Enterprise Framework)",
     excerpt:

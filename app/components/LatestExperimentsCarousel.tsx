@@ -8,12 +8,12 @@ import Link from "next/link"
 
 import { articles as baseArticles } from "@/lib/articles"
 
-// Reorder so that ID 7, ID 6, and ID 1 are the first three on the homepage carousel
+// Reorder so that ID 8, ID 7, and ID 6 are the first three on the homepage carousel
 const articles = [
+    baseArticles.find(a => a.id === 8)!,
     baseArticles.find(a => a.id === 7)!,
     baseArticles.find(a => a.id === 6)!,
-    baseArticles.find(a => a.id === 1)!,
-    ...baseArticles.filter(a => a.id !== 7 && a.id !== 6 && a.id !== 1)
+    ...baseArticles.filter(a => a.id !== 8 && a.id !== 7 && a.id !== 6)
 ]
 
 export default function LatestExperimentsCarousel() {

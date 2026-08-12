@@ -254,7 +254,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
                         <li><strong>Generative Engine Optimization (GEO)</strong> is broader, focusing on shaping how the AI narrative includes your brand in comprehensive answers and recommendations. GEO is about ensuring your brand is named, accurately represented, and recommended in conversational and generative contexts that cover complex topics.</li>
                     </ul>
                     <p className="mb-6">
-                        A smart modern SEO approach blends traditional SEO, AEO for quick-answer optimization, and GEO for authoritative brand presence in AI-generated content.
+                        A smart modern SEO approach blends traditional SEO, AEO for quick-answer optimization, and GEO for authoritative brand presence in AI-generated content <em>(read my full analysis on <Link href="/growth-lab/is-geo-going-to-ruin-the-web-like-seo-did" className="text-cyan-400 hover:underline">whether GEO will ruin the web like SEO did</Link>)</em>.
                     </p>
 
                     <h3 className="text-2xl font-bold mb-4 mt-8 bg-gradient-to-r from-cyan-400 to-red-500 bg-clip-text text-transparent">

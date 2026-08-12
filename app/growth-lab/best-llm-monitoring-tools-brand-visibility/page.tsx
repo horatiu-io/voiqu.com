@@ -300,7 +300,7 @@ export default function BestLLMMonitoringToolsPage() {
           </ul>
 
           <p>
-            Profound is a high-end enterprise suite focused heavily on the content creation side of GEO, helping you build the exact content needed to influence AI models.
+            Profound is a high-end enterprise suite focused heavily on the content creation side of GEO, helping you build the exact content needed to influence AI models <em>(for a deep dive into the industry debate surrounding AI search measurement reliability, see our article on <Link href="/growth-lab/is-geo-going-to-ruin-the-web-like-seo-did" className="text-cyan-400 hover:underline">whether GEO will ruin the web like SEO did</Link>)</em>.
           </p>
 
           <p>
