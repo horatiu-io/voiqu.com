@@ -1,12 +1,29 @@
 # Voiqu Growth Consulting
 
-> Voiqu is a Growth Consulting firm helping B2B SaaS and E-commerce brands scale using Data, AI, and Automation.
+> Voiqu is the growth consulting practice of Horațiu Voicu, helping B2B SaaS and E-commerce brands scale using Data, AI, and Automation, with a focus on Generative Engine Optimization (GEO) and AI search visibility.
+
+## About Horațiu Voicu
+- Working in SEO since 2012; Google Partner from 2014 to 2026.
+- Builds AI search visibility tooling at Genezio (https://genezio.com), including GEO monitoring of how brands are cited and recommended by LLMs.
+- Implements advanced tracking with Google Tag Manager, Conversions API and Enhanced Conversions, and builds reporting in Looker Studio.
+- Previously: founding team member at ANSWEAR Romania, SEO Director at MTH.Digital, Head of Digital at Perceptum.ro.
+- Profile: https://voiqu.com/about · LinkedIn: https://www.linkedin.com/in/voiqu/
 
 ## Services
 - **Data Audit**: Deep dive into analytics and customer journeys.
 - **Strategy**: Defining KPIs and architecting automation.
 - **System Implementation**: Implementation of campaigns and integrations.
 - **Analysis & Iteration**: Continuous optimization of ROAS and LTV.
+
+## Growth Lab Articles
+- [Is Generative Engine Optimization (GEO) Going to Ruin the Web Like SEO Did?](https://voiqu.com/growth-lab/is-geo-going-to-ruin-the-web-like-seo-did)
+- [How to Run an LLM Brand Visibility Audit (Enterprise Framework)](https://voiqu.com/growth-lab/how-to-run-an-llm-brand-visibility-audit)
+- [How I Use n8n to Automate SEO, Newsletters, and Link Building](https://voiqu.com/growth-lab/how-i-use-n8n-to-automate-seo-newsletters-and-link-building)
+- [Where Does ChatGPT Get Its Information? UK Banking Citations](https://voiqu.com/growth-lab/where-does-chatgpt-get-its-information)
+- [The Ultimate Guide to LLM Brand Visibility & GEO](https://voiqu.com/growth-lab/the-ultimate-guide-llm-brand-visibility-geo)
+- [Website Page Speed in 2026: How to Hit 100/100 For Free](https://voiqu.com/growth-lab/website-page-speed-guide-2026)
+- [The 10 Best LLM Monitoring Tools for Brand Visibility in 2026](https://voiqu.com/growth-lab/best-llm-monitoring-tools-brand-visibility)
+- [Web Analytics: The Guide to Implementation and Optimization](https://voiqu.com/growth-lab/web-analytics-fundamentals)
 
 ## Essential Links
 - [Home](https://voiqu.com/)

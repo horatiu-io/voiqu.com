@@ -51,6 +51,7 @@ export default function BestLLMMonitoringToolsPage() {
     dateModified: "2026-02-24T09:00:00+02:00",
     author: {
       "@type": "Person",
+      "@id": "https://voiqu.com/about#person",
       name: author.name,
       url: author.linkedin,
     },

@@ -40,6 +40,7 @@ export default function TheUltimateGuideLLMBrandVisibilityGEO() {
         dateModified: "2026-03-11T09:00:00+02:00",
         author: {
             "@type": "Person",
+            "@id": "https://voiqu.com/about#person",
             name: author.name,
             url: author.linkedin,
         },

@@ -70,6 +70,7 @@ export default function WebsitePageSpeedGuide2026() {
         dateModified: "2026-03-30T10:00:00+02:00",
         author: {
             "@type": "Person",
+            "@id": "https://voiqu.com/about#person",
             name: author.name,
             url: author.linkedin,
         },
