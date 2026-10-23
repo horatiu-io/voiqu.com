@@ -98,12 +98,21 @@ export async function POST(request: NextRequest) {
 
     // Forward the request to the n8n webhook
     const n8nUrl = "https://n8n.voiqu.com/webhook/a4279f62-fe56-46b4-adf6-a7297a479ff3";
-    
+    const n8nAuth = process.env.N8N_WEBHOOK_AUTH;
+
+    if (!n8nAuth) {
+      console.error("[GEO Webhook] N8N_WEBHOOK_AUTH is not configured.");
+      return NextResponse.json(
+        { error: "Internal Server Error", message: "Webhook is not configured." },
+        { status: 500 }
+      );
+    }
+
     const response = await fetch(n8nUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer_x8934y5uhndskjfnYY78",
+        "Authorization": n8nAuth,
       },
       body: JSON.stringify({ url, email: cleanEmail }),
     });
