@@ -36,6 +36,7 @@ export default function WebAnalyticsFundamentalsPage() {
     dateModified: "2024-07-29T09:00:00+08:00",
     author: {
       "@type": "Person",
+      "@id": "https://voiqu.com/about#person",
       name: author.name,
       url: author.linkedin,
     },

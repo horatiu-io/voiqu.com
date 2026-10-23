@@ -37,6 +37,7 @@ export default function WhereDoesChatGPTGetItsInformation() {
     dateModified: "2026-05-28T15:34:59+03:00",
     author: {
       "@type": "Person",
+      "@id": "https://voiqu.com/about#person",
       name: author.name,
       url: author.linkedin,
     },

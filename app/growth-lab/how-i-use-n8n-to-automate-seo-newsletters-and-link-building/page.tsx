@@ -45,6 +45,7 @@ export default function HowIUsen8nToAutomateSEONewslettersAndLinkBuilding() {
     dateModified: "2026-05-29T12:30:00+03:00",
     author: {
       "@type": "Person",
+      "@id": "https://voiqu.com/about#person",
       name: author.name,
       url: author.linkedin,
     },

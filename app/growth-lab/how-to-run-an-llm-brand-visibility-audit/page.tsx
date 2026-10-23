@@ -71,6 +71,7 @@ export default function LLMBrandVisibilityAuditPage() {
     dateModified: "2026-06-25T14:00:00+03:00",
     author: {
       "@type": "Person",
+      "@id": "https://voiqu.com/about#person",
       name: author.name,
       url: author.linkedin,
     },

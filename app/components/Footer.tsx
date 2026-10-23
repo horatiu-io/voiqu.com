@@ -116,22 +116,6 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-
-            {/* Google Partners Badge - Last on the right */}
-            <a
-              href="https://www.google.com/partners/agency?id=6099937741"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4"
-            >
-              <img
-                src="https://www.gstatic.com/partners/badge/images/2025/PartnerBadgeClickable.svg"
-                alt="Google Partners Badge"
-                width={40} // Added explicit width
-                height={40} // Added explicit height
-                className="h-10 hover:opacity-80 transition-opacity"
-              />
-            </a>
           </div>
         </div>
       </div>

@@ -8,17 +8,38 @@ export default function About() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://voiqu.com/about#person",
     "name": "Horațiu Voicu",
+    "alternateName": ["Horatiu Voicu", "Voiqu"],
     "jobTitle": "Senior Growth Consultant",
+    "description": "Growth and GEO consultant working in SEO since 2012 and a Google Partner from 2014 to 2026. Builds AI search visibility tooling at Genezio and implements advanced tracking with GTM, Conversions API and Enhanced Conversions.",
     "url": "https://voiqu.com/about",
+    "image": "https://voiqu.com/h-voiqu.webp",
+    "email": "mailto:h@voiqu.com",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Genezio",
+      "url": "https://genezio.com"
+    },
     "sameAs": [
-      "https://linkedin.com/in/voiqu"
+      "https://www.linkedin.com/in/voiqu/",
+      "https://x.com/voiqu",
+      "https://github.com/horatiu-io",
+      "https://www.reddit.com/user/voiquh",
+      "https://www.instagram.com/voiqu/",
+      "https://www.facebook.com/voiquh"
     ],
     "knowsAbout": [
       "Generative Engine Optimization",
+      "AI Search Visibility",
+      "Search Engine Optimization",
       "Growth Marketing",
       "AI Automation",
-      "Advanced Tracking & SEO",
+      "Google Ads",
+      "Google Tag Manager",
+      "Conversions API",
+      "Enhanced Conversions",
+      "Looker Studio",
       "GTM Strategy",
       "Omnichannel Performance Marketing"
     ]
@@ -96,7 +117,7 @@ export default function About() {
             <ScrollReveal className="w-full lg:w-7/12" delay={150}>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-full mb-8">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
-                <span className="text-white text-sm font-medium tracking-wide">Google Partner</span>
+                <span className="text-white text-sm font-medium tracking-wide">Google Partner 2014–2026</span>
               </div>
 
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
